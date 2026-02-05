@@ -1,0 +1,2848 @@
+{
+  "version": "1.0",
+  "total_roles": 8,
+  "total_questions": 576,
+  "questions_per_role": 72,
+  "roles": [
+    {
+      "id": "mom",
+      "name": "Mom",
+      "description": "Questions for preserving a mother's story",
+      "categories": [
+        {
+          "name": "Early Life & Origins",
+          "questions": [
+            {
+              "question": "What is your full name, and is there a story behind it?",
+              "placeholder": "Share your name and any stories behind it..."
+            },
+            {
+              "question": "Where and when were you born?",
+              "placeholder": "Tell us about the place where you came into this world..."
+            },
+            {
+              "question": "What do you remember about the place where you grew up?",
+              "placeholder": "Take your time and share what comes to mind..."
+            },
+            {
+              "question": "Who were the people in your household growing up?",
+              "placeholder": "Describe them and what they meant to you..."
+            },
+            {
+              "question": "What was your relationship like with your mother?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "What was your relationship like with your father?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "Did you have siblings? What were they like?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What was your family's financial situation when you were young?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "The stories of our childhood shape who we become."
+        },
+        {
+          "name": "Growing Up",
+          "questions": [
+            {
+              "question": "What games did you play as a child?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "Who was your best friend growing up?",
+              "placeholder": "Describe them and what they meant to you..."
+            },
+            {
+              "question": "What was your favorite thing to do on weekends?",
+              "placeholder": "What made this special to you?"
+            },
+            {
+              "question": "What did a typical day look like when you were a child?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What was your favorite meal your mother made?",
+              "placeholder": "What made this special to you?"
+            },
+            {
+              "question": "Did you have any pets? Tell me about them.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "What scared you as a child?",
+              "placeholder": "What made you feel this way?"
+            },
+            {
+              "question": "What made you feel brave?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "In every mother's arms lies the safety of home."
+        },
+        {
+          "name": "School Years",
+          "questions": [
+            {
+              "question": "What was school like for you?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "What subjects did you love or hate?",
+              "placeholder": "Tell us about your heart..."
+            },
+            {
+              "question": "Who was your favorite teacher and why?",
+              "placeholder": "What made this special to you?"
+            },
+            {
+              "question": "What extracurricular activities were you involved in?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "Tell me about your closest friends in school.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "What was the social scene like? Were there cliques?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "Did you go to any school dances or proms?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "Growing up is measured not in years, but in moments of understanding."
+        },
+        {
+          "name": "Becoming a Woman",
+          "questions": [
+            {
+              "question": "What do you remember about becoming a teenager?",
+              "placeholder": "Take your time and share what comes to mind..."
+            },
+            {
+              "question": "What was dating like for you?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "Tell me about your first love.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "Tell me about your first heartbreak.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "What did you dream about for your future?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What were the expectations placed on you as a young woman?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "Did you rebel against anything? How?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "The path to womanhood is paved with courage and grace."
+        },
+        {
+          "name": "Love & Partnership",
+          "questions": [
+            {
+              "question": "How did you meet my father/your partner?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What made you fall in love?",
+              "placeholder": "Tell us about your heart..."
+            },
+            {
+              "question": "Tell me about your wedding day.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "What was the hardest part of your marriage?",
+              "placeholder": "How did you face this?"
+            },
+            {
+              "question": "What was the best part of your marriage?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "How did you and your partner handle disagreements?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What kept you together through difficult times?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "Love is not just a feeling—it's a choice made every day."
+        },
+        {
+          "name": "Becoming a Mother",
+          "questions": [
+            {
+              "question": "When did you know you wanted to be a mother?",
+              "placeholder": "What would you want them to know?"
+            },
+            {
+              "question": "Tell me about when you found out you were pregnant.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "What was pregnancy like for you?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "Tell me about the day I was born.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "What was it like holding me for the first time?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "What surprised you most about being a new mother?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What were the hardest parts of early motherhood?",
+              "placeholder": "How did you face this?"
+            }
+          ],
+          "quote": "Becoming a mother changes you in ways you never imagined."
+        },
+        {
+          "name": "Raising Us",
+          "questions": [
+            {
+              "question": "What do you remember about each of us as babies?",
+              "placeholder": "Take your time and share what comes to mind..."
+            },
+            {
+              "question": "What were we like as toddlers?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What was your parenting style?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What values did you try to instill in us?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What was your favorite age for each of us?",
+              "placeholder": "What made this special to you?"
+            },
+            {
+              "question": "What was the hardest age?",
+              "placeholder": "How did you face this?"
+            },
+            {
+              "question": "Tell me about a time we made you laugh until you cried.",
+              "placeholder": "Share as much or as little as you'd like..."
+            }
+          ],
+          "quote": "Children may outgrow your lap, but they never outgrow your heart."
+        },
+        {
+          "name": "Balancing It All",
+          "questions": [
+            {
+              "question": "Did you work outside the home? Tell me about your career.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "How did you balance work and family?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What sacrifices did you make for our family?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What dreams did you put on hold?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What kept you going during the hardest times?",
+              "placeholder": "How did you face this?"
+            },
+            {
+              "question": "Who supported you when things got overwhelming?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What made you feel like a good mother?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "Balance is not something you find—it's something you create."
+        },
+        {
+          "name": "Life Lessons",
+          "questions": [
+            {
+              "question": "What's the most important lesson life has taught you?",
+              "placeholder": "What lessons have stayed with you?"
+            },
+            {
+              "question": "What do you know now that you wish you'd known sooner?",
+              "placeholder": "Share your heart here..."
+            },
+            {
+              "question": "What's your biggest regret?",
+              "placeholder": "It's okay to reflect on what might have been..."
+            },
+            {
+              "question": "What are you most proud of in your life?",
+              "placeholder": "This is your moment to celebrate..."
+            },
+            {
+              "question": "What mistake taught you the most?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "Who had the biggest influence on who you became?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What kept you strong during the hardest times?",
+              "placeholder": "How did you face this?"
+            }
+          ],
+          "quote": "The lessons life teaches us become the wisdom we pass on."
+        },
+        {
+          "name": "Messages for Us",
+          "questions": [
+            {
+              "question": "What do you want me to know about you that I might not?",
+              "placeholder": "What would you want them to know?"
+            },
+            {
+              "question": "What do you hope I remember about you?",
+              "placeholder": "Take your time and share what comes to mind..."
+            },
+            {
+              "question": "What qualities do you see in me that make you proud?",
+              "placeholder": "This is your moment to celebrate..."
+            },
+            {
+              "question": "What worries do you have for my future?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What hopes do you have for my life?",
+              "placeholder": "Share your heart here..."
+            },
+            {
+              "question": "What advice would you give me about being a parent someday?",
+              "placeholder": "What wisdom would you share?"
+            },
+            {
+              "question": "What advice would you give me about love and relationships?",
+              "placeholder": "What wisdom would you share?"
+            }
+          ],
+          "quote": "A mother's legacy lives on in the hearts she's touched."
+        }
+      ]
+    },
+    {
+      "id": "dad",
+      "name": "Dad",
+      "description": "Questions for preserving a father's story",
+      "categories": [
+        {
+          "name": "Early Life & Origins",
+          "questions": [
+            {
+              "question": "What is your full name, and is there a story behind it?",
+              "placeholder": "Share your name and any stories behind it..."
+            },
+            {
+              "question": "Where and when were you born?",
+              "placeholder": "Tell us about the place where you came into this world..."
+            },
+            {
+              "question": "What do you remember about the place where you grew up?",
+              "placeholder": "Take your time and share what comes to mind..."
+            },
+            {
+              "question": "Who were the people in your household growing up?",
+              "placeholder": "Describe them and what they meant to you..."
+            },
+            {
+              "question": "What was your relationship like with your father?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "What was your relationship like with your mother?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "Did you have siblings? What were they like?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What was your family's financial situation when you were young?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "A man's character is built in the small moments of his childhood."
+        },
+        {
+          "name": "Growing Up",
+          "questions": [
+            {
+              "question": "What games and activities did you love as a boy?",
+              "placeholder": "Tell us about your heart..."
+            },
+            {
+              "question": "Who was your best friend growing up?",
+              "placeholder": "Describe them and what they meant to you..."
+            },
+            {
+              "question": "What did you do for fun on weekends?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What was a typical day like when you were a child?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "What was your favorite meal growing up?",
+              "placeholder": "What made this special to you?"
+            },
+            {
+              "question": "Did you have any pets? Tell me about them.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "What were you afraid of as a kid?",
+              "placeholder": "What made you feel this way?"
+            },
+            {
+              "question": "What made you feel strong or brave?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "The games we played as boys taught us the rules we'd live by as men."
+        },
+        {
+          "name": "School Years",
+          "questions": [
+            {
+              "question": "What was school like for you?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "What subjects did you excel at or struggle with?",
+              "placeholder": "How did you face this?"
+            },
+            {
+              "question": "Who was your favorite teacher and why?",
+              "placeholder": "What made this special to you?"
+            },
+            {
+              "question": "What sports or activities were you involved in?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "Tell me about your closest friends in school.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "Were you popular, shy, or somewhere in between?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What was your proudest achievement in school?",
+              "placeholder": "This is your moment to celebrate..."
+            }
+          ],
+          "quote": "Education shapes the mind, but character shapes the life."
+        },
+        {
+          "name": "Becoming a Man",
+          "questions": [
+            {
+              "question": "What was it like becoming a teenager?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "When did you start dating? What was that like?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "Tell me about your first love.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "Tell me about your first heartbreak.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "What dreams did you have for your future?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What were the expectations placed on you as a young man?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "Did you serve in the military? Tell me about that experience.",
+              "placeholder": "Share as much or as little as you'd like..."
+            }
+          ],
+          "quote": "Becoming a man is less about age and more about responsibility."
+        },
+        {
+          "name": "Love & Partnership",
+          "questions": [
+            {
+              "question": "How did you meet my mother/your partner?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What made you fall in love?",
+              "placeholder": "Tell us about your heart..."
+            },
+            {
+              "question": "How did you know she was the one?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "Tell me about proposing or deciding to get married.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "What was your wedding day like?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "What was the hardest part of marriage?",
+              "placeholder": "How did you face this?"
+            },
+            {
+              "question": "What was the best part?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "The foundation of a strong marriage is built on respect and partnership."
+        },
+        {
+          "name": "Becoming a Father",
+          "questions": [
+            {
+              "question": "When did you know you wanted to be a father?",
+              "placeholder": "What would you want them to know?"
+            },
+            {
+              "question": "Tell me about when you found out you were going to be a dad.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "What did you feel when you found out?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "Tell me about the day I was born.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "What was it like holding me for the first time?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "What surprised you most about being a new father?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What were your fears as a new dad?",
+              "placeholder": "What made you feel this way?"
+            }
+          ],
+          "quote": "The moment you hold your child, everything changes."
+        },
+        {
+          "name": "Raising Us",
+          "questions": [
+            {
+              "question": "What do you remember about each of us as babies?",
+              "placeholder": "Take your time and share what comes to mind..."
+            },
+            {
+              "question": "What were we like as kids?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What was your approach to discipline and guidance?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What values did you try to teach us?",
+              "placeholder": "What lessons have stayed with you?"
+            },
+            {
+              "question": "What was your favorite thing to do with us?",
+              "placeholder": "What made this special to you?"
+            },
+            {
+              "question": "What was the hardest part of being our dad?",
+              "placeholder": "How did you face this?"
+            },
+            {
+              "question": "Tell me about a moment with us that made you burst with pride.",
+              "placeholder": "Share as much or as little as you'd like..."
+            }
+          ],
+          "quote": "Raising children teaches you more about yourself than anything else."
+        },
+        {
+          "name": "Work & Purpose",
+          "questions": [
+            {
+              "question": "Tell me about your career journey.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "What work are you most proud of?",
+              "placeholder": "This is your moment to celebrate..."
+            },
+            {
+              "question": "What challenges did you face in your career?",
+              "placeholder": "How did you face this?"
+            },
+            {
+              "question": "How did you balance work and family?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What sacrifices did you make for our family?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What kept you going during tough times at work?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What did you learn about leadership and responsibility?",
+              "placeholder": "What lessons have stayed with you?"
+            }
+          ],
+          "quote": "A man's true worth is measured by what he builds and who he serves."
+        },
+        {
+          "name": "Life Lessons",
+          "questions": [
+            {
+              "question": "What's the most important lesson life has taught you?",
+              "placeholder": "What lessons have stayed with you?"
+            },
+            {
+              "question": "What do you know now that you wish you'd known sooner?",
+              "placeholder": "Share your heart here..."
+            },
+            {
+              "question": "What's your biggest regret?",
+              "placeholder": "It's okay to reflect on what might have been..."
+            },
+            {
+              "question": "What are you most proud of in your life?",
+              "placeholder": "This is your moment to celebrate..."
+            },
+            {
+              "question": "What failure or mistake taught you the most?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "Who had the biggest influence on the man you became?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What does strength mean to you?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "Wisdom is earned through both triumphs and failures."
+        },
+        {
+          "name": "Messages for Us",
+          "questions": [
+            {
+              "question": "What do you want me to know about you that I might not?",
+              "placeholder": "What would you want them to know?"
+            },
+            {
+              "question": "What do you hope I remember about you?",
+              "placeholder": "Take your time and share what comes to mind..."
+            },
+            {
+              "question": "What qualities do you see in me that make you proud?",
+              "placeholder": "This is your moment to celebrate..."
+            },
+            {
+              "question": "What worries do you have for my future?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What hopes do you have for my life?",
+              "placeholder": "Share your heart here..."
+            },
+            {
+              "question": "What advice would you give me about being a parent someday?",
+              "placeholder": "What wisdom would you share?"
+            },
+            {
+              "question": "What advice would you give me about work and finding purpose?",
+              "placeholder": "What wisdom would you share?"
+            }
+          ],
+          "quote": "A father's greatest legacy is the example he leaves behind."
+        }
+      ]
+    },
+    {
+      "id": "son",
+      "name": "Son",
+      "description": "Questions for preserving a son's story",
+      "categories": [
+        {
+          "name": "Early Life & Origins",
+          "questions": [
+            {
+              "question": "What is your full name, and is there a story behind it?",
+              "placeholder": "Share your name and any stories behind it..."
+            },
+            {
+              "question": "Where and when were you born?",
+              "placeholder": "Tell us about the place where you came into this world..."
+            },
+            {
+              "question": "What do you remember about your childhood home?",
+              "placeholder": "Take your time and share what comes to mind..."
+            },
+            {
+              "question": "Tell me about your parents.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "What was your relationship like with your mom?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "What was your relationship like with your dad?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "Did you have siblings? What were they like?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What was your family dynamic growing up?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "Our story begins long before we can remember."
+        },
+        {
+          "name": "Growing Up",
+          "questions": [
+            {
+              "question": "What were you like as a child?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What games and activities did you love?",
+              "placeholder": "Tell us about your heart..."
+            },
+            {
+              "question": "Who was your best friend growing up?",
+              "placeholder": "Describe them and what they meant to you..."
+            },
+            {
+              "question": "What did you do for fun?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What was your favorite thing about being a kid?",
+              "placeholder": "What made this special to you?"
+            },
+            {
+              "question": "Did you have any pets?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What scared you as a child?",
+              "placeholder": "What made you feel this way?"
+            },
+            {
+              "question": "What made you feel brave or strong?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "The child we were still lives in the person we've become."
+        },
+        {
+          "name": "School Years",
+          "questions": [
+            {
+              "question": "What was school like for you?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "What subjects interested you or challenged you?",
+              "placeholder": "How did you face this?"
+            },
+            {
+              "question": "Who were your closest friends in school?",
+              "placeholder": "Describe them and what they meant to you..."
+            },
+            {
+              "question": "What activities, sports, or hobbies were you into?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "Were you popular, shy, or somewhere in between?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "Who was a teacher or mentor that influenced you?",
+              "placeholder": "Describe them and what they meant to you..."
+            },
+            {
+              "question": "What were you good at?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "School is where we learn facts—life is where we learn truth."
+        },
+        {
+          "name": "Becoming Your Own Person",
+          "questions": [
+            {
+              "question": "What was it like becoming a teenager?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "When did you start to figure out who you were?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What were you passionate about?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "How did you rebel or push boundaries?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What did you dream about for your future?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "Who influenced the person you became?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What was your relationship with your parents like during these years?",
+              "placeholder": "Paint us a picture of what it was like..."
+            }
+          ],
+          "quote": "Finding yourself means having the courage to be different."
+        },
+        {
+          "name": "Love & Relationships",
+          "questions": [
+            {
+              "question": "Tell me about your first crush or love.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "What was dating like for you?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "Tell me about your first heartbreak.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "What did you learn about love and relationships?",
+              "placeholder": "What lessons have stayed with you?"
+            },
+            {
+              "question": "Did you get married or have a serious partner?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "How did you meet them?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What attracted you to them?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "Love teaches us as much about ourselves as it does about others."
+        },
+        {
+          "name": "Finding Your Path",
+          "questions": [
+            {
+              "question": "What was your first real job?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "How did you figure out what you wanted to do?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "Tell me about your career journey.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "What work are you most proud of?",
+              "placeholder": "This is your moment to celebrate..."
+            },
+            {
+              "question": "What challenges or setbacks did you face?",
+              "placeholder": "How did you face this?"
+            },
+            {
+              "question": "What keeps you motivated?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What would you do if you could do anything?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "Purpose isn't found—it's forged through trial and persistence."
+        },
+        {
+          "name": "Your Relationship with Your Parents",
+          "questions": [
+            {
+              "question": "How has your relationship with your parents changed over time?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What did you learn from your mother?",
+              "placeholder": "What lessons have stayed with you?"
+            },
+            {
+              "question": "What did you learn from your father?",
+              "placeholder": "What lessons have stayed with you?"
+            },
+            {
+              "question": "What do you appreciate about them now that you didn't before?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What do you understand now about their choices?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "How are you similar to them?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "How are you different?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "Understanding our parents comes when we finally see them as people."
+        },
+        {
+          "name": "Becoming a Father (if applicable)",
+          "questions": [
+            {
+              "question": "When did you know you wanted to be a father?",
+              "placeholder": "What would you want them to know?"
+            },
+            {
+              "question": "Tell me about when you found out you were going to be a dad.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "What did becoming a father mean to you?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What kind of father do you want to be?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What have your children taught you?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "How has fatherhood changed you?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What's the hardest part of being a dad?",
+              "placeholder": "How did you face this?"
+            }
+          ],
+          "quote": "Fatherhood reveals strengths we never knew we had."
+        },
+        {
+          "name": "Life Lessons",
+          "questions": [
+            {
+              "question": "What's the most important lesson you've learned?",
+              "placeholder": "What lessons have stayed with you?"
+            },
+            {
+              "question": "What do you know now that you wish you'd known sooner?",
+              "placeholder": "Share your heart here..."
+            },
+            {
+              "question": "What are you most proud of?",
+              "placeholder": "This is your moment to celebrate..."
+            },
+            {
+              "question": "What do you regret?",
+              "placeholder": "It's okay to reflect on what might have been..."
+            },
+            {
+              "question": "What failure or mistake taught you the most?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What keeps you going during hard times?",
+              "placeholder": "How did you face this?"
+            },
+            {
+              "question": "What brings you joy?",
+              "placeholder": "Share what brings light to your life..."
+            }
+          ],
+          "quote": "The hardest lessons often yield the greatest wisdom."
+        },
+        {
+          "name": "Messages for the Future",
+          "questions": [
+            {
+              "question": "What do you want people to know about you?",
+              "placeholder": "What would you want them to know?"
+            },
+            {
+              "question": "What do you hope to be remembered for?",
+              "placeholder": "Take your time and share what comes to mind..."
+            },
+            {
+              "question": "What advice would you give to your children?",
+              "placeholder": "What wisdom would you share?"
+            },
+            {
+              "question": "What advice would you give to your younger family members?",
+              "placeholder": "What wisdom would you share?"
+            },
+            {
+              "question": "What values do you want to pass on?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What traditions do you want to continue?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What wisdom have you gained that you want to share?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "What we pass on matters more than what we leave behind."
+        }
+      ]
+    },
+    {
+      "id": "daughter",
+      "name": "Daughter",
+      "description": "Questions for preserving a daughter's story",
+      "categories": [
+        {
+          "name": "Early Life & Origins",
+          "questions": [
+            {
+              "question": "What is your full name, and is there a story behind it?",
+              "placeholder": "Share your name and any stories behind it..."
+            },
+            {
+              "question": "Where and when were you born?",
+              "placeholder": "Tell us about the place where you came into this world..."
+            },
+            {
+              "question": "What do you remember about your childhood home?",
+              "placeholder": "Take your time and share what comes to mind..."
+            },
+            {
+              "question": "Tell me about your parents.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "What was your relationship like with your mom?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "What was your relationship like with your dad?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "Did you have siblings? What were they like?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What was your family dynamic growing up?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "Every story has a beginning—ours starts with family."
+        },
+        {
+          "name": "Growing Up",
+          "questions": [
+            {
+              "question": "What were you like as a child?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What games and activities did you love?",
+              "placeholder": "Tell us about your heart..."
+            },
+            {
+              "question": "Who was your best friend growing up?",
+              "placeholder": "Describe them and what they meant to you..."
+            },
+            {
+              "question": "What did you do for fun?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What was your favorite thing about being a kid?",
+              "placeholder": "What made this special to you?"
+            },
+            {
+              "question": "Did you have any pets?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What scared you as a child?",
+              "placeholder": "What made you feel this way?"
+            },
+            {
+              "question": "What made you feel brave or confident?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "The girl we were shaped the woman we would become."
+        },
+        {
+          "name": "School Years",
+          "questions": [
+            {
+              "question": "What was school like for you?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "What subjects interested you or challenged you?",
+              "placeholder": "How did you face this?"
+            },
+            {
+              "question": "Who were your closest friends in school?",
+              "placeholder": "Describe them and what they meant to you..."
+            },
+            {
+              "question": "What activities or hobbies were you into?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "Were you popular, shy, or somewhere in between?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "Who was a teacher or mentor that influenced you?",
+              "placeholder": "Describe them and what they meant to you..."
+            },
+            {
+              "question": "What were you good at?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "Education opens doors, but courage walks through them."
+        },
+        {
+          "name": "Becoming Your Own Person",
+          "questions": [
+            {
+              "question": "What was it like becoming a teenager?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "When did you start to figure out who you were?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What were you passionate about?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "How did you rebel or push boundaries?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What did you dream about for your future?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "Who influenced the person you became?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What was your relationship with your parents like during these years?",
+              "placeholder": "Paint us a picture of what it was like..."
+            }
+          ],
+          "quote": "Becoming yourself is both a journey and a revolution."
+        },
+        {
+          "name": "Love & Relationships",
+          "questions": [
+            {
+              "question": "Tell me about your first crush or love.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "What was dating like for you?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "Tell me about your first heartbreak.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "What did you learn about love and relationships?",
+              "placeholder": "What lessons have stayed with you?"
+            },
+            {
+              "question": "Did you get married or have a serious partner?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "How did you meet them?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What attracted you to them?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "Love is both our greatest teacher and our biggest risk."
+        },
+        {
+          "name": "Finding Your Path",
+          "questions": [
+            {
+              "question": "What was your first real job?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "How did you figure out what you wanted to do?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "Tell me about your career journey.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "What work are you most proud of?",
+              "placeholder": "This is your moment to celebrate..."
+            },
+            {
+              "question": "What challenges or setbacks did you face?",
+              "placeholder": "How did you face this?"
+            },
+            {
+              "question": "What keeps you motivated?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What would you do if you could do anything?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "Purpose is discovered when passion meets perseverance."
+        },
+        {
+          "name": "Your Relationship with Your Parents",
+          "questions": [
+            {
+              "question": "How has your relationship with your parents changed over time?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What did you learn from your mother?",
+              "placeholder": "What lessons have stayed with you?"
+            },
+            {
+              "question": "What did you learn from your father?",
+              "placeholder": "What lessons have stayed with you?"
+            },
+            {
+              "question": "What do you appreciate about them now that you didn't before?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What do you understand now about their choices?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "How are you similar to them?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "How are you different?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "We understand our parents better when we see them through grown eyes."
+        },
+        {
+          "name": "Becoming a Mother (if applicable)",
+          "questions": [
+            {
+              "question": "When did you know you wanted to be a mother?",
+              "placeholder": "What would you want them to know?"
+            },
+            {
+              "question": "Tell me about when you found out you were pregnant.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "What did becoming a mother mean to you?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What kind of mother do you want to be?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What have your children taught you?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "How has motherhood changed you?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What's the hardest part of being a mom?",
+              "placeholder": "How did you face this?"
+            }
+          ],
+          "quote": "Motherhood transforms us in ways we could never imagine."
+        },
+        {
+          "name": "Life Lessons",
+          "questions": [
+            {
+              "question": "What's the most important lesson you've learned?",
+              "placeholder": "What lessons have stayed with you?"
+            },
+            {
+              "question": "What do you know now that you wish you'd known sooner?",
+              "placeholder": "Share your heart here..."
+            },
+            {
+              "question": "What are you most proud of?",
+              "placeholder": "This is your moment to celebrate..."
+            },
+            {
+              "question": "What do you regret?",
+              "placeholder": "It's okay to reflect on what might have been..."
+            },
+            {
+              "question": "What failure or mistake taught you the most?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What keeps you going during hard times?",
+              "placeholder": "How did you face this?"
+            },
+            {
+              "question": "What brings you joy?",
+              "placeholder": "Share what brings light to your life..."
+            }
+          ],
+          "quote": "Wisdom comes from both success and struggle."
+        },
+        {
+          "name": "Messages for the Future",
+          "questions": [
+            {
+              "question": "What do you want people to know about you?",
+              "placeholder": "What would you want them to know?"
+            },
+            {
+              "question": "What do you hope to be remembered for?",
+              "placeholder": "Take your time and share what comes to mind..."
+            },
+            {
+              "question": "What advice would you give to your children?",
+              "placeholder": "What wisdom would you share?"
+            },
+            {
+              "question": "What advice would you give to your younger family members?",
+              "placeholder": "What wisdom would you share?"
+            },
+            {
+              "question": "What values do you want to pass on?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What traditions do you want to continue?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What wisdom have you gained that you want to share?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "The legacy we leave is written in the lives we touch."
+        }
+      ]
+    },
+    {
+      "id": "grandma",
+      "name": "Grandma",
+      "description": "Questions for preserving a grandmother's story",
+      "categories": [
+        {
+          "name": "Early Life & Origins",
+          "questions": [
+            {
+              "question": "What is your full name, and is there a story behind it?",
+              "placeholder": "Share your name and any stories behind it..."
+            },
+            {
+              "question": "Where and when were you born?",
+              "placeholder": "Tell us about the place where you came into this world..."
+            },
+            {
+              "question": "What was the world like when you were growing up?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "Tell me about your childhood home and neighborhood.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "What do you remember about your parents?",
+              "placeholder": "Take your time and share what comes to mind..."
+            },
+            {
+              "question": "What was your mother like?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "What was your father like?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "Did you have siblings? Tell me about them.",
+              "placeholder": "Share as much or as little as you'd like..."
+            }
+          ],
+          "quote": "Every life begins with a story waiting to be told."
+        },
+        {
+          "name": "Growing Up in a Different Time",
+          "questions": [
+            {
+              "question": "What games did children play back then?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What was different about childhood in your era?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "How did people communicate without modern technology?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What chores or responsibilities did you have?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What was your favorite thing to do for fun?",
+              "placeholder": "What made this special to you?"
+            },
+            {
+              "question": "What do you remember about family meals and gatherings?",
+              "placeholder": "Take your time and share what comes to mind..."
+            },
+            {
+              "question": "What holidays or celebrations were most special?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What scared you as a child?",
+              "placeholder": "What made you feel this way?"
+            }
+          ],
+          "quote": "The world we grew up in shaped who we would become."
+        },
+        {
+          "name": "School & Education",
+          "questions": [
+            {
+              "question": "What was school like in your day?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "How far did you go in school?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What subjects did you enjoy or excel at?",
+              "placeholder": "Share what brings light to your life..."
+            },
+            {
+              "question": "Who was your favorite teacher?",
+              "placeholder": "What made this special to you?"
+            },
+            {
+              "question": "What were the expectations for girls' education back then?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "Did you face any barriers to your education?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What activities or clubs were you involved in?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "Education was not a given—it was an opportunity to be seized."
+        },
+        {
+          "name": "Coming of Age",
+          "questions": [
+            {
+              "question": "What was it like being a young woman in your era?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "What were the social expectations placed on you?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "Tell me about dating and courtship back then.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "Tell me about your first love.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "What was fashion and style like in your youth?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "What music or entertainment did you enjoy?",
+              "placeholder": "Share what brings light to your life..."
+            },
+            {
+              "question": "What world events shaped your generation?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "Each generation faces its own trials and writes its own chapter."
+        },
+        {
+          "name": "Love & Marriage",
+          "questions": [
+            {
+              "question": "How did you meet Grandpa?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What attracted you to him?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "Tell me about your courtship and engagement.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "What was your wedding like?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "What were the early years of marriage like?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What challenges did you face as a young couple?",
+              "placeholder": "How did you face this?"
+            },
+            {
+              "question": "What kept your marriage strong over the years?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "True love endures through seasons of joy and hardship alike."
+        },
+        {
+          "name": "Motherhood & Family",
+          "questions": [
+            {
+              "question": "When did you become a mother?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "Tell me about your children when they were young.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "What was motherhood like in your generation?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "How did you manage the household?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What values did you try to instill in your children?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What were the joys of raising your family?",
+              "placeholder": "Share what brings light to your life..."
+            },
+            {
+              "question": "What were the hardest parts?",
+              "placeholder": "How did you face this?"
+            }
+          ],
+          "quote": "A mother's work is never done, but it's always worth it."
+        },
+        {
+          "name": "Becoming a Grandmother",
+          "questions": [
+            {
+              "question": "What was it like becoming a grandmother?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "Tell me about meeting each grandchild for the first time.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "How is being a grandmother different from being a mother?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What do you love most about being a grandma?",
+              "placeholder": "Tell us about your heart..."
+            },
+            {
+              "question": "What do you hope to teach your grandchildren?",
+              "placeholder": "Share your heart here..."
+            },
+            {
+              "question": "What traditions do you want to pass down?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What memories with your grandchildren are most precious?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "The greatest joy is watching your children become parents themselves."
+        },
+        {
+          "name": "A Life Lived",
+          "questions": [
+            {
+              "question": "What major changes have you witnessed in your lifetime?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What invention or change amazed you most?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What historical moments do you remember most vividly?",
+              "placeholder": "Take your time and share what comes to mind..."
+            },
+            {
+              "question": "Who were the people who shaped who you became?",
+              "placeholder": "Describe them and what they meant to you..."
+            },
+            {
+              "question": "What work did you do throughout your life?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What are you most proud of accomplishing?",
+              "placeholder": "This is your moment to celebrate..."
+            },
+            {
+              "question": "What adventures or travels do you remember?",
+              "placeholder": "Take your time and share what comes to mind..."
+            }
+          ],
+          "quote": "A lifetime of changes teaches us what truly matters."
+        },
+        {
+          "name": "Wisdom & Reflection",
+          "questions": [
+            {
+              "question": "What's the most important lesson life has taught you?",
+              "placeholder": "What lessons have stayed with you?"
+            },
+            {
+              "question": "What do you know now that you wish you'd known when you were young?",
+              "placeholder": "Share your heart here..."
+            },
+            {
+              "question": "What do you regret?",
+              "placeholder": "It's okay to reflect on what might have been..."
+            },
+            {
+              "question": "What are you most grateful for?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What mistake taught you the most?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What does it mean to live a good life?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What keeps you strong?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "With age comes wisdom—and the courage to share it."
+        },
+        {
+          "name": "Messages for Future Generations",
+          "questions": [
+            {
+              "question": "What do you want your family to know about where they came from?",
+              "placeholder": "What would you want them to know?"
+            },
+            {
+              "question": "What stories from your life must not be forgotten?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What values do you hope your family carries forward?",
+              "placeholder": "Share your heart here..."
+            },
+            {
+              "question": "What traditions do you want to continue?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What advice would you give to the women in our family?",
+              "placeholder": "What wisdom would you share?"
+            },
+            {
+              "question": "What advice would you give to the men in our family?",
+              "placeholder": "What wisdom would you share?"
+            },
+            {
+              "question": "What do you hope people remember about you?",
+              "placeholder": "Take your time and share what comes to mind..."
+            }
+          ],
+          "quote": "The stories we pass down become the roots of the next generation."
+        }
+      ]
+    },
+    {
+      "id": "grandpa",
+      "name": "Grandpa",
+      "description": "Questions for preserving a grandfather's story",
+      "categories": [
+        {
+          "name": "Early Life & Origins",
+          "questions": [
+            {
+              "question": "What is your full name, and is there a story behind it?",
+              "placeholder": "Share your name and any stories behind it..."
+            },
+            {
+              "question": "Where and when were you born?",
+              "placeholder": "Tell us about the place where you came into this world..."
+            },
+            {
+              "question": "What was the world like when you were growing up?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "Tell me about your childhood home and where you grew up.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "What do you remember about your father?",
+              "placeholder": "Take your time and share what comes to mind..."
+            },
+            {
+              "question": "What do you remember about your mother?",
+              "placeholder": "Take your time and share what comes to mind..."
+            },
+            {
+              "question": "Did you have siblings? What were they like?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What was your family's situation when you were young?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "The roots of who we are reach deep into the soil of our beginnings."
+        },
+        {
+          "name": "Growing Up",
+          "questions": [
+            {
+              "question": "What games and activities did boys do back then?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "Who was your best friend growing up?",
+              "placeholder": "Describe them and what they meant to you..."
+            },
+            {
+              "question": "What did you do for fun and adventure?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What chores or work did you have to do as a boy?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What was your favorite thing about being a kid?",
+              "placeholder": "What made this special to you?"
+            },
+            {
+              "question": "Did you have any pets or animals?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What were you afraid of as a child?",
+              "placeholder": "What made you feel this way?"
+            },
+            {
+              "question": "What made you feel brave or strong?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "Childhood is where we learn what it means to dream."
+        },
+        {
+          "name": "School & Education",
+          "questions": [
+            {
+              "question": "What was school like in your day?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "How far did you go in your education?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What subjects were you good at or interested in?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "Who was a teacher that influenced you?",
+              "placeholder": "Describe them and what they meant to you..."
+            },
+            {
+              "question": "What activities or sports were you involved in?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What were the expectations for boys back then?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What was your proudest achievement in school?",
+              "placeholder": "This is your moment to celebrate..."
+            }
+          ],
+          "quote": "Knowledge is the foundation, but wisdom is the structure we build upon it."
+        },
+        {
+          "name": "Becoming a Man",
+          "questions": [
+            {
+              "question": "What was it like growing up in your generation?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "When did you start working? What was your first job?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "Did you serve in the military? Tell me about that.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "What world events shaped your young adulthood?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What was dating and courtship like back then?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "Tell me about your first love or serious relationship.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "What were you taught about being a man?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "A boy becomes a man when he learns to stand on his own."
+        },
+        {
+          "name": "Love & Marriage",
+          "questions": [
+            {
+              "question": "How did you meet Grandma?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What made you fall in love with her?",
+              "placeholder": "Tell us about your heart..."
+            },
+            {
+              "question": "Tell me about your courtship and proposal.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "What was your wedding day like?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "What were the early years of marriage like?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What challenges did you face as a young husband?",
+              "placeholder": "How did you face this?"
+            },
+            {
+              "question": "What kept your marriage strong over the decades?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "A lasting partnership is built on love, respect, and weathering storms together."
+        },
+        {
+          "name": "Fatherhood & Family",
+          "questions": [
+            {
+              "question": "When did you become a father?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What was it like becoming a dad?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "Tell me about your children when they were young.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "What kind of father did you want to be?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "How did you provide for and protect your family?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What values did you try to teach your children?",
+              "placeholder": "What lessons have stayed with you?"
+            },
+            {
+              "question": "What were the joys of fatherhood?",
+              "placeholder": "Share what brings light to your life..."
+            }
+          ],
+          "quote": "Fatherhood is the greatest responsibility and the greatest privilege."
+        },
+        {
+          "name": "Work & Providing",
+          "questions": [
+            {
+              "question": "Tell me about your career and work life.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "What work are you most proud of?",
+              "placeholder": "This is your moment to celebrate..."
+            },
+            {
+              "question": "What challenges did you face in your work?",
+              "placeholder": "How did you face this?"
+            },
+            {
+              "question": "What did being a provider mean to you?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What sacrifices did you make for the family?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What kept you going during tough times?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What did you learn about leadership and responsibility?",
+              "placeholder": "What lessons have stayed with you?"
+            }
+          ],
+          "quote": "A man's legacy is written in the lives he provides for."
+        },
+        {
+          "name": "Becoming a Grandfather",
+          "questions": [
+            {
+              "question": "What was it like becoming a grandfather?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "Tell me about meeting each grandchild for the first time.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "How is being a grandpa different from being a dad?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What do you love most about being a grandfather?",
+              "placeholder": "Tell us about your heart..."
+            },
+            {
+              "question": "What do you hope to teach your grandchildren?",
+              "placeholder": "Share your heart here..."
+            },
+            {
+              "question": "What traditions or values do you want to pass down?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What memories with your grandchildren mean the most?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "Becoming a grandfather gives you a second chance to get it right."
+        },
+        {
+          "name": "A Life of Changes",
+          "questions": [
+            {
+              "question": "What major changes have you witnessed in your lifetime?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What inventions or technologies amazed you most?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What historical moments stand out in your memory?",
+              "placeholder": "Take your time and share what comes to mind..."
+            },
+            {
+              "question": "Who were the people who shaped the man you became?",
+              "placeholder": "Describe them and what they meant to you..."
+            },
+            {
+              "question": "What hardships or struggles did you overcome?",
+              "placeholder": "How did you face this?"
+            },
+            {
+              "question": "What accomplishments are you most proud of?",
+              "placeholder": "This is your moment to celebrate..."
+            },
+            {
+              "question": "What adventures or travels do you remember?",
+              "placeholder": "Take your time and share what comes to mind..."
+            }
+          ],
+          "quote": "Life's greatest teacher is experience—both bitter and sweet."
+        },
+        {
+          "name": "Wisdom & Legacy",
+          "questions": [
+            {
+              "question": "What's the most important lesson life has taught you?",
+              "placeholder": "What lessons have stayed with you?"
+            },
+            {
+              "question": "What do you know now that you wish you'd known when you were young?",
+              "placeholder": "Share your heart here..."
+            },
+            {
+              "question": "What do you regret?",
+              "placeholder": "It's okay to reflect on what might have been..."
+            },
+            {
+              "question": "What are you most grateful for?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What does it mean to be a good man?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What does strength really mean?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What advice would you give the men in our family?",
+              "placeholder": "What wisdom would you share?"
+            }
+          ],
+          "quote": "What we leave behind is not what's written on our tombstone, but what's written in the hearts of others."
+        }
+      ]
+    },
+    {
+      "id": "aunt_uncle",
+      "name": "Aunt/Uncle",
+      "description": "Questions for preserving an aunt or uncle's story",
+      "categories": [
+        {
+          "name": "Early Life & Origins",
+          "questions": [
+            {
+              "question": "What is your full name, and is there a story behind it?",
+              "placeholder": "Share your name and any stories behind it..."
+            },
+            {
+              "question": "Where and when were you born?",
+              "placeholder": "Tell us about the place where you came into this world..."
+            },
+            {
+              "question": "Tell me about where you grew up.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "What do you remember about your parents?",
+              "placeholder": "Take your time and share what comes to mind..."
+            },
+            {
+              "question": "What was your relationship like with your siblings?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "Where did you fall in the birth order?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What was your childhood home like?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "What was your family dynamic growing up?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "We are shaped by our roots, but defined by how we grow."
+        },
+        {
+          "name": "Growing Up",
+          "questions": [
+            {
+              "question": "What were you like as a child?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What did you love to do for fun?",
+              "placeholder": "Tell us about your heart..."
+            },
+            {
+              "question": "Who were your closest friends?",
+              "placeholder": "Describe them and what they meant to you..."
+            },
+            {
+              "question": "What games or activities did you enjoy?",
+              "placeholder": "Share what brings light to your life..."
+            },
+            {
+              "question": "What was your relationship like with your siblings as kids?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "Did you get into mischief together?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What family memories stand out from childhood?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What were you good at?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "Childhood memories are the treasures we carry forever."
+        },
+        {
+          "name": "School & Finding Yourself",
+          "questions": [
+            {
+              "question": "What was school like for you?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "What subjects or activities interested you?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "Who influenced you during those years?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What were your talents or passions?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "How did you discover what you were good at?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What challenges did you face growing up?",
+              "placeholder": "How did you face this?"
+            },
+            {
+              "question": "What were your dreams for the future?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "Finding yourself means discovering who you are apart from who you were expected to be."
+        },
+        {
+          "name": "Your Own Path",
+          "questions": [
+            {
+              "question": "How did your path differ from your siblings'?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What choices defined who you became?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "Tell me about your career or work journey.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "What obstacles did you overcome?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What accomplishments are you most proud of?",
+              "placeholder": "This is your moment to celebrate..."
+            },
+            {
+              "question": "What adventures or travels shaped you?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "How did you find your place in the world?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "The courage to choose your own path is the first step to becoming who you're meant to be."
+        },
+        {
+          "name": "Love & Relationships",
+          "questions": [
+            {
+              "question": "Tell me about your love life and relationships.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "Did you get married or have a long-term partner?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What did you learn about love?",
+              "placeholder": "What lessons have stayed with you?"
+            },
+            {
+              "question": "What mattered most to you in relationships?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "Who were the most important people in your life?",
+              "placeholder": "Describe them and what they meant to you..."
+            },
+            {
+              "question": "What friendships have meant the most?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "How do you define family?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "Love comes in many forms—and each one teaches us something new."
+        },
+        {
+          "name": "Being an Aunt/Uncle",
+          "questions": [
+            {
+              "question": "What was it like when your nieces and nephews were born?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "Tell me about meeting each of us for the first time.",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "What has being an aunt/uncle meant to you?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What do you love most about this role?",
+              "placeholder": "Tell us about your heart..."
+            },
+            {
+              "question": "How is being an aunt/uncle different from being a parent?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What kind of aunt/uncle did you want to be?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What special bond do you feel you have with us?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "Being an aunt or uncle means being a guide, a friend, and a safe place."
+        },
+        {
+          "name": "Your Relationship with Our Family",
+          "questions": [
+            {
+              "question": "How has your relationship with your siblings evolved over time?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What role do you play in the family?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What family moments have meant the most to you?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "How have you supported your siblings over the years?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What do you admire about your siblings?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What challenges have you navigated as a family?",
+              "placeholder": "How did you face this?"
+            },
+            {
+              "question": "What family traditions or gatherings are most special?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "Family isn't always about blood—it's about who shows up."
+        },
+        {
+          "name": "Life Lessons",
+          "questions": [
+            {
+              "question": "What's the most important lesson life has taught you?",
+              "placeholder": "What lessons have stayed with you?"
+            },
+            {
+              "question": "What do you know now that you wish you'd known sooner?",
+              "placeholder": "Share your heart here..."
+            },
+            {
+              "question": "What choices are you most proud of?",
+              "placeholder": "This is your moment to celebrate..."
+            },
+            {
+              "question": "What do you regret or wish you'd done differently?",
+              "placeholder": "Share your heart here..."
+            },
+            {
+              "question": "Who has influenced you the most?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What has brought you the most joy?",
+              "placeholder": "Share what brings light to your life..."
+            },
+            {
+              "question": "What has been your biggest challenge?",
+              "placeholder": "How did you face this?"
+            }
+          ],
+          "quote": "The best lessons often come from unexpected teachers."
+        },
+        {
+          "name": "Advice & Wisdom",
+          "questions": [
+            {
+              "question": "What advice would you give about finding your own path?",
+              "placeholder": "What wisdom would you share?"
+            },
+            {
+              "question": "What have you learned about following your passions?",
+              "placeholder": "What lessons have stayed with you?"
+            },
+            {
+              "question": "What would you tell someone struggling to find themselves?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What advice would you give about relationships?",
+              "placeholder": "What wisdom would you share?"
+            },
+            {
+              "question": "What have you learned about family?",
+              "placeholder": "What lessons have stayed with you?"
+            },
+            {
+              "question": "What would you tell someone about being different or unique?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What does it mean to you to live authentically?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "Living authentically means honoring both where you came from and where you're going."
+        },
+        {
+          "name": "Messages for Us",
+          "questions": [
+            {
+              "question": "What do you want me to know about you that I might not?",
+              "placeholder": "What would you want them to know?"
+            },
+            {
+              "question": "What do you hope I remember about you?",
+              "placeholder": "Take your time and share what comes to mind..."
+            },
+            {
+              "question": "What do you see in me that makes you proud?",
+              "placeholder": "This is your moment to celebrate..."
+            },
+            {
+              "question": "What do you hope for my future?",
+              "placeholder": "Share your heart here..."
+            },
+            {
+              "question": "What advice do you want to give me about life?",
+              "placeholder": "What wisdom would you share?"
+            },
+            {
+              "question": "What wisdom from your experience do you want to share?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What role do you hope to play in my life?",
+              "placeholder": "Share your heart here..."
+            }
+          ],
+          "quote": "The greatest gift we can give is our presence and our truth."
+        }
+      ]
+    },
+    {
+      "id": "sibling",
+      "name": "Sibling",
+      "description": "Questions for preserving a sibling's story",
+      "categories": [
+        {
+          "name": "Early Life Together",
+          "questions": [
+            {
+              "question": "What is your full name, and is there a story behind it?",
+              "placeholder": "Share your name and any stories behind it..."
+            },
+            {
+              "question": "Where and when were you born?",
+              "placeholder": "Tell us about the place where you came into this world..."
+            },
+            {
+              "question": "What do you remember about our childhood home?",
+              "placeholder": "Take your time and share what comes to mind..."
+            },
+            {
+              "question": "What was it like having me as a sibling?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "What do you remember about when I was born?",
+              "placeholder": "Take your time and share what comes to mind..."
+            },
+            {
+              "question": "What were we like as kids together?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What games did we play?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What mischief did we get into?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "Before we were anything else, we were family."
+        },
+        {
+          "name": "Our Family",
+          "questions": [
+            {
+              "question": "What do you remember about our parents?",
+              "placeholder": "Take your time and share what comes to mind..."
+            },
+            {
+              "question": "How would you describe our family dynamic?",
+              "placeholder": "Share as much or as little as you'd like..."
+            },
+            {
+              "question": "What was your relationship like with Mom?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "What was your relationship like with Dad?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "How were you treated differently than me?",
+              "placeholder": "It's okay to reflect on what might have been..."
+            },
+            {
+              "question": "What family traditions do you remember?",
+              "placeholder": "Take your time and share what comes to mind..."
+            },
+            {
+              "question": "What was your role in the family?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What did you love about our family?",
+              "placeholder": "Tell us about your heart..."
+            }
+          ],
+          "quote": "Our parents shaped us, but our family defined us."
+        },
+        {
+          "name": "Growing Up Side by Side",
+          "questions": [
+            {
+              "question": "What was it like going to school together or in the same school?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "Did you feel protective of me? Competitive?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What did we have in common?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "How were we different?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What did you admire about me?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What annoyed you about me?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "Tell me about a time we had each other's backs.",
+              "placeholder": "Share as much or as little as you'd like..."
+            }
+          ],
+          "quote": "Growing up together means sharing a history no one else can understand."
+        },
+        {
+          "name": "Teenage Years",
+          "questions": [
+            {
+              "question": "What was our relationship like as teenagers?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "Did we grow closer or drift apart?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What was your life like during those years?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "What struggles were you dealing with?",
+              "placeholder": "How did you face this?"
+            },
+            {
+              "question": "What was I like as a teenager from your perspective?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "Did you look up to me or did I look up to you?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What did we fight about?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "The teenage years test every relationship—including the ones with our siblings."
+        },
+        {
+          "name": "Becoming Adults",
+          "questions": [
+            {
+              "question": "When did our relationship start to change?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What was it like when we left home or went different ways?",
+              "placeholder": "Paint us a picture of what it was like..."
+            },
+            {
+              "question": "How did you find your own path?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What choices defined who you became?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "How did my choices affect you or our relationship?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What were you proud of me for?",
+              "placeholder": "This is your moment to celebrate..."
+            },
+            {
+              "question": "What did you worry about for me?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "As we grow, we must each find our own way—even if that means growing apart."
+        },
+        {
+          "name": "Our Adult Relationship",
+          "questions": [
+            {
+              "question": "How has our relationship evolved as adults?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What do we have in common now?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "How are we different now?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What role do you play in my life?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What role do I play in yours?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What do you value about our relationship?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What has been hard about being siblings as adults?",
+              "placeholder": "How did you face this?"
+            }
+          ],
+          "quote": "The beauty of adult relationships is choosing each other again."
+        },
+        {
+          "name": "Shared History",
+          "questions": [
+            {
+              "question": "What family stories do only we truly understand?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What experiences shaped both of us?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What did we survive or get through together?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What do we remember differently about our childhood?",
+              "placeholder": "Take your time and share what comes to mind..."
+            },
+            {
+              "question": "What truths about our family do we share?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What inside jokes or references do we have?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What do you see when you look at our parents now?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "Only those who were there truly know what it was like."
+        },
+        {
+          "name": "Life Lessons",
+          "questions": [
+            {
+              "question": "What's the most important thing you've learned in life?",
+              "placeholder": "What lessons have stayed with you?"
+            },
+            {
+              "question": "What do you know now that you wish you'd known sooner?",
+              "placeholder": "Share your heart here..."
+            },
+            {
+              "question": "What are you most proud of?",
+              "placeholder": "This is your moment to celebrate..."
+            },
+            {
+              "question": "What do you regret?",
+              "placeholder": "It's okay to reflect on what might have been..."
+            },
+            {
+              "question": "What has been your biggest challenge?",
+              "placeholder": "How did you face this?"
+            },
+            {
+              "question": "What keeps you going?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What brings you joy?",
+              "placeholder": "Share what brings light to your life..."
+            }
+          ],
+          "quote": "The lessons learned together become the wisdom we carry alone."
+        },
+        {
+          "name": "What I Want You to Know",
+          "questions": [
+            {
+              "question": "What do you want me to know about you that I might not?",
+              "placeholder": "What would you want them to know?"
+            },
+            {
+              "question": "What do you want me to understand about our childhood?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What do you wish you'd told me sooner?",
+              "placeholder": "Share your heart here..."
+            },
+            {
+              "question": "What do you appreciate about me that you've never said?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What do you wish I knew about how you felt?",
+              "placeholder": "Share your heart here..."
+            },
+            {
+              "question": "What misconceptions do you think I have about you?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What do you need from me now?",
+              "placeholder": "Take your time and share your story..."
+            }
+          ],
+          "quote": "Sometimes the hardest truths are the ones we need to hear from each other."
+        },
+        {
+          "name": "Messages for Each Other",
+          "questions": [
+            {
+              "question": "What do you hope I remember about you?",
+              "placeholder": "Take your time and share what comes to mind..."
+            },
+            {
+              "question": "What do you see in me that makes you proud?",
+              "placeholder": "This is your moment to celebrate..."
+            },
+            {
+              "question": "What advice would you give me about life?",
+              "placeholder": "What wisdom would you share?"
+            },
+            {
+              "question": "What do you want me to know about our family history?",
+              "placeholder": "What would you want them to know?"
+            },
+            {
+              "question": "What traditions or values do you want us to keep?",
+              "placeholder": "Take your time and share your story..."
+            },
+            {
+              "question": "What do you hope for my future?",
+              "placeholder": "Share your heart here..."
+            },
+            {
+              "question": "What do you want our families to know about each other?",
+              "placeholder": "What would you want them to know?"
+            }
+          ],
+          "quote": "The bond between siblings is both unbreakable and irreplaceable."
+        }
+      ]
+    }
+  ]
+}
