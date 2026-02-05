@@ -9,6 +9,7 @@ import { UpgradeOptions } from './components/Upsells/UpgradeOptions';
 import { ExportPage } from './components/Export/ExportPage';
 import { CustomPromptsSection } from './components/Questions/CustomPromptsSection';
 import { StoryCompleteCelebration } from './components/Celebration/StoryCompleteCelebration';
+import QuestionInterfaceWrapper from './components/QuestionInterfaceWrapper';
 
 function PrivateRoute({ children }: { children: React.ReactNode }) {
   const { isAuthenticated, loading } = useAuth();
@@ -73,23 +74,11 @@ function AppContent() {
             </PrivateRoute>
           }
         />
-        <Route
+       <Route
           path="/questions"
           element={
             <PrivateRoute>
-              <div className="max-w-4xl mx-auto px-4 py-8">
-                <div className="bg-white rounded-xl p-8 text-center">
-                  <h1 className="text-2xl font-bold text-gray-900 mb-4">Q&A Flow - Conversation 2</h1>
-                  <p className="text-gray-600 mb-6">
-                    This is where Conversation 2's Q&A flow will be integrated.
-                    <br />
-                    Story ID from URL: {new URLSearchParams(window.location.search).get('story_id') || new URLSearchParams(window.location.search).get('project_id') || 'No story selected'}
-                  </p>
-                  <button className="bg-burgundy-700 text-white px-6 py-3 rounded-xl font-medium hover:bg-burgundy-800 transition-colors">
-                    Start Next Question
-                  </button>
-                </div>
-              </div>
+              <QuestionInterfaceWrapper />
             </PrivateRoute>
           }
         />
