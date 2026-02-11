@@ -21,6 +21,8 @@ export function SignUpForm() {
     setLoading(true);
     setError('');
 
+  console.log('🔵 Starting signup with:', formData.email);
+
     try {
       // Create auth user
       const { data: authData, error: authError } = await supabase.auth.signUp({
@@ -34,6 +36,8 @@ export function SignUpForm() {
         }
       });
 
+    console.log('🟢 Signup response:', { authData, authError });
+
       if (authError) throw authError;
 
 	// Auto-login after signup
@@ -41,6 +45,8 @@ export function SignUpForm() {
 	  email: formData.email,
 	  password: formData.password
 });
+
+    console.log('🟡 Login response:', { signInError });
 
 if (signInError) throw signInError;
 
