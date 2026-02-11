@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 import { LoginForm } from './components/Auth/LoginForm';
+import { SignUpForm } from './components/Auth/SignUpForm';
 import { Navigation } from './components/Layout/Navigation';
 import { Dashboard } from './components/Dashboard/Dashboard';
 import { ProjectsList } from './components/Projects/ProjectsList';
@@ -42,6 +43,10 @@ function AppContent() {
           path="/login" 
           element={isAuthenticated ? <Navigate to="/dashboard" /> : <LoginForm />} 
         />
+	<Route 
+	  path="/signup" 
+	  element={isAuthenticated ? <Navigate to="/dashboard" /> : <SignUpForm />} 
+	/>
         <Route
           path="/dashboard"
           element={
