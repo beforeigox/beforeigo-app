@@ -50,11 +50,8 @@ export function SignUpForm() {
 
 if (signInError) throw signInError;
 
-// Wait for auth state to update
-await new Promise(resolve => setTimeout(resolve, 500));
-
-// Redirect to dashboard
-navigate('/dashboard');
+// Force reload to refresh auth state
+window.location.href = '/dashboard';
       
     } catch (err: any) {
       console.error('Signup error:', err);
