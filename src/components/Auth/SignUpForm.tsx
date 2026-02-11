@@ -36,8 +36,16 @@ export function SignUpForm() {
 
       if (authError) throw authError;
 
-      // Redirect to dashboard
-      navigate('/dashboard');
+	// Auto-login after signup
+	const { error: signInError } = await supabase.auth.signInWithPassword({
+	  email: formData.email,
+	  password: formData.password
+});
+
+if (signInError) throw signInError;
+
+// Redirect to dashboard
+navigate('/dashboard');
       
     } catch (err: any) {
       console.error('Signup error:', err);
