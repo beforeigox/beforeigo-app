@@ -1,6 +1,18 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { AuthState, User } from '../types';
-import { mockUser, testCredentials } from '../utils/mockData';
+import { supabase } from '../supabase';
+
+interface User {
+  id: string;
+  email: string;
+  full_name?: string;
+  plan?: string;
+}
+
+interface AuthState {
+  isAuthenticated: boolean;
+  user: User | null;
+  loading: boolean;
+}
 
 interface AuthContextValue extends AuthState {
   login: (email: string, password: string) => Promise<boolean>;
@@ -25,41 +37,66 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   });
 
   useEffect(() => {
-    // Check for saved session
-    const savedUser = localStorage.getItem('user');
-    if (savedUser) {
-      setAuthState({
-        isAuthenticated: true,
-        user: JSON.parse(savedUser),
-        loading: false
-      });
-    } else {
-      setAuthState(prev => ({ ...prev, loading: false }));
-    }
+    // Check active session
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (session?.user) {
+        setAuthState({
+          isAuthenticated: true,
+          user: {
+            id: session.user.id,
+            email: session.user.email!,
+            full_name: session.user.user_metadata.full_name,
+            plan: session.user.user_metadata.plan
+          },
+          loading: false
+        });
+      } else {
+        setAuthState({ isAuthenticated: false, user: null, loading: false });
+      }
+    });
+
+    // Listen for auth changes
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      if (session?.user) {
+        setAuthState({
+          isAuthenticated: true,
+          user: {
+            id: session.user.id,
+            email: session.user.email!,
+            full_name: session.user.user_metadata.full_name,
+            plan: session.user.user_metadata.plan
+          },
+          loading: false
+        });
+      } else {
+        setAuthState({ isAuthenticated: false, user: null, loading: false });
+      }
+    });
+
+    return () => subscription.unsubscribe();
   }, []);
 
   const login = async (email: string, password: string): Promise<boolean> => {
-    // Mock authentication - replace with Supabase later
-    if (email === testCredentials.email && password === testCredentials.password) {
-      const user = mockUser;
-      localStorage.setItem('user', JSON.stringify(user));
-      setAuthState({
-        isAuthenticated: true,
-        user,
-        loading: false
+    try {
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email,
+        password
       });
+
+      if (error) {
+        console.error('Login error:', error);
+        return false;
+      }
+
       return true;
+    } catch (error) {
+      console.error('Login error:', error);
+      return false;
     }
-    return false;
   };
 
-  const logout = () => {
-    localStorage.removeItem('user');
-    setAuthState({
-      isAuthenticated: false,
-      user: null,
-      loading: false
-    });
+  const logout = async () => {
+    await supabase.auth.signOut();
   };
 
   return (
