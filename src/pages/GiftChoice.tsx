@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { User, Heart, Mail, ArrowRight, Gift, Sparkles } from 'lucide-react';
+import { sendGiftEmail } from '../lib/email';
 
 export function GiftChoice() {
   const navigate = useNavigate();
@@ -28,11 +29,11 @@ export function GiftChoice() {
   setSending(true);
 
   try {
-    // TODO: Send actual email via Resend
-    console.log('Sending gift to:', giftEmail, 'Message:', giftMessage);
-    
-    // Show success screen
-    setShowSuccess(true);
+  // Send actual email via Resend
+  await sendGiftEmail(giftEmail, 'Your Friend', plan, giftMessage);
+  
+  // Show success screen
+  setShowSuccess(true);
     
   } catch (error) {
     console.error('Error sending gift:', error);
