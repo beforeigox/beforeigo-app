@@ -12,36 +12,82 @@ export function GiftChoice() {
   const [giftEmail, setGiftEmail] = useState('');
   const [giftMessage, setGiftMessage] = useState('');
   const [sending, setSending] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const handleForMyself = () => {
     // Redirect to signup with plan info
     navigate(`/signup?plan=${plan}`);
   };
 
-  const handleSendGift = async () => {
-    if (!giftEmail) {
-      alert('Please enter recipient email');
-      return;
-    }
+	const handleSendGift = async () => {
+  if (!giftEmail) {
+    alert('Please enter recipient email');
+    return;
+  }
 
-    setSending(true);
+  setSending(true);
 
-    try {
-      // TODO: Send actual email via Resend
-      // For now, just simulate
-      console.log('Sending gift to:', giftEmail, 'Message:', giftMessage);
-      
-      // Show success and redirect
-      alert(`Gift sent to ${giftEmail}! They'll receive a magic link to create their account.`);
-      navigate('/');
-      
-    } catch (error) {
-      console.error('Error sending gift:', error);
-      alert('Failed to send gift. Please try again.');
-    } finally {
-      setSending(false);
-    }
-  };
+  try {
+    // TODO: Send actual email via Resend
+    console.log('Sending gift to:', giftEmail, 'Message:', giftMessage);
+    
+    // Show success screen
+    setShowSuccess(true);
+    
+  } catch (error) {
+    console.error('Error sending gift:', error);
+    alert('Failed to send gift. Please try again.');
+  } finally {
+    setSending(false);
+  }
+};
+if (showSuccess) {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-50 flex items-center justify-center p-4">
+      <div className="bg-white rounded-2xl shadow-xl p-8 max-w-md w-full text-center">
+        <div className="inline-flex p-4 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl mb-6">
+          <Sparkles className="h-12 w-12 text-white" />
+        </div>
+        <h1 className="text-3xl font-serif font-bold text-warmGray-900 mb-3">
+          Gift Sent Successfully!
+        </h1>
+        <p className="text-warmGray-600 mb-6">
+          Your gift has been sent to<br />
+          <span className="font-semibold text-warmGray-900">{giftEmail}</span>
+        </p>
+        <div className="bg-blue-50 rounded-xl p-6 mb-6 text-left">
+          <h3 className="font-semibold text-warmGray-900 mb-3">What happens next:</h3>
+          <ul className="space-y-2 text-sm text-warmGray-700">
+            <li className="flex items-start space-x-2">
+              <span className="text-green-500 mt-0.5">✓</span>
+              <span>They'll receive an email with a magic link</span>
+            </li>
+            <li className="flex items-start space-x-2">
+              <span className="text-green-500 mt-0.5">✓</span>
+              <span>They'll create their account and start their story</span>
+            </li>
+            <li className="flex items-start space-x-2">
+              <span className="text-green-500 mt-0.5">✓</span>
+              <span>They can begin capturing memories right away</span>
+            </li>
+          </ul>
+        </div>
+        {giftMessage && (
+          <div className="bg-warmGray-50 rounded-xl p-4 mb-6 text-left">
+            <p className="text-sm text-warmGray-600 mb-1">Your message:</p>
+            <p className="text-warmGray-700 italic">"{giftMessage}"</p>
+          </div>
+        )}
+        <button
+          onClick={() => navigate('/')}
+          className="w-full bg-gradient-to-r from-burgundy-600 to-rose-600 text-white py-4 rounded-xl font-semibold hover:from-burgundy-700 hover:to-rose-700 transition-all"
+        >
+          Return to Home
+        </button>
+      </div>
+    </div>
+  );
+}
 
   if (showGiftForm) {
     return (
