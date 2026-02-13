@@ -49,6 +49,20 @@ export function SignUpForm() {
     console.log('🟡 Login response:', { signInError });
 
 if (signInError) throw signInError;
+// Send purchase confirmation email
+fetch('/api/send-email', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    type: 'purchaseConfirmation',
+    to: formData.email,
+    data: {
+      name: formData.name,
+      plan: plan.charAt(0).toUpperCase() + plan.slice(1)
+    }
+  })
+}).catch(err => console.error('Purchase email failed:', err));
+
 
 // Force reload to refresh auth state
 window.location.href = '/dashboard';
