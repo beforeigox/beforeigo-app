@@ -34,7 +34,7 @@ export function Dashboard() {
       {/* Welcome Section */}
       <div className="mb-12">
         <h1 className="text-4xl font-serif font-bold mb-3" style={{ color: '#3A3A3A', fontFamily: 'Crimson Text, serif' }}>
-          Welcome back, {user?.name?.split(' ')[0]}
+          Welcome back{user?.full_name ? `, ${user.full_name.split(' ')[0]}` : ''}!
         </h1>
         <p className="text-lg" style={{ color: '#6B5B73' }}>
           Continue preserving your legacy
