@@ -1,15 +1,14 @@
 import React from 'react';
 import { ArrowRight, BookOpen, Clock, Target, Plus, Gift, Star, Sparkles } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
-import { mockProjects, upsellFeatures } from '../../utils/mockData';
 import { Link, useNavigate } from 'react-router-dom';
 
 export function Dashboard() {
   const { user } = useAuth();
   const navigate = useNavigate();
   
-  // Filter only purchased stories
-  const purchasedStories = mockProjects.filter(project => project.isPurchased);
+  // TODO: Fetch real stories from Supabase
+const purchasedStories: any[] = [];
   const currentStory = purchasedStories.find(story => story.status === 'active') || purchasedStories[0];
   
   const totalProgress = purchasedStories.reduce((acc, story) => acc + story.progress, 0) / purchasedStories.length;
