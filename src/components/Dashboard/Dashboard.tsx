@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight, BookOpen, Clock, Target, Plus, Gift, Star, Sparkles } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
+import { upsellFeatures } from '../../utils/mockData';
 import { Link, useNavigate } from 'react-router-dom';
 
 export function Dashboard() {
