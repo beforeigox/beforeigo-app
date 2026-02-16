@@ -57,7 +57,7 @@ export function RoleSelection() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-cream-50 to-rose-50 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-cream-50 to-burgundy-50 flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl shadow-xl p-8 max-w-2xl w-full">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-serif font-bold text-warmGray-900 mb-2">
@@ -94,7 +94,7 @@ export function RoleSelection() {
         <button
           onClick={handleCreateStory}
           disabled={!selectedRole || creating}
-          className="w-full bg-gradient-to-r from-burgundy-600 to-rose-600 text-white py-4 rounded-xl font-semibold hover:from-burgundy-700 hover:to-rose-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+          className="w-full bg-burgundy-600 text-white py-4 rounded-xl font-semibold hover:from-burgundy-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
         >
           {creating ? (
             <>

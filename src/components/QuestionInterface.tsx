@@ -1165,7 +1165,7 @@ const saveResponse = async () => {
             newCaptions[idx] = e.target.value;
             setImageCaptions(newCaptions);
           }}
-          placeholder="Add context (who's in this photo?)"
+          placeholder="Describe your photo"
           className="mt-2 w-32 px-2 py-1 text-xs border border-cream-300 rounded-lg focus:border-burgundy-600 focus:outline-none"
         />
       </div>
