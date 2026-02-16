@@ -719,11 +719,10 @@ export default function QuestionInterface({ story, questions, onBack }: Question
     }
   };
 
-  const saveResponse = async () => {
-    if (!currentQuestion) return;
-
-    setSaving(true);
-    try {
+  const saveDraft = async () => {
+  if (!currentQuestion) return;
+  
+  try {
       const existingResponse = responses.get(currentQuestion.id);
       const isCompleted = currentAnswer.trim().length > 0 || currentImages.length > 0;
 
@@ -1114,30 +1113,7 @@ export default function QuestionInterface({ story, questions, onBack }: Question
               <textarea
                 value={currentAnswer}
                 onChange={(e) => setCurrentAnswer(e.target.value)}
-		onBlur={async () => {
-  if (!currentQuestion) return;
-  const existingResponse = responses.get(currentQuestion.id);
-  const isCompleted = currentAnswer.trim().length > 0 || currentImages.length > 0;
-  
-  if (existingResponse) {
-    await supabase.from('responses').update({
-      answer: currentAnswer,
-      image_urls: currentImages,
-      is_completed: isCompleted,
-      updated_at: new Date().toISOString()
-    }).eq('id', existingResponse.id);
-  await loadResponses();
-  } else {
-    await supabase.from('responses').insert({
-      story_id: story.id,
-      question_id: currentQuestion.id,
-      answer: currentAnswer,
-      image_urls: currentImages,
-      is_completed: isCompleted
-    });
-    await loadResponses();	
-  }
-}}
+		onBlur={saveDraft}
                 placeholder={currentQuestion.placeholder || getPlaceholderText(currentQuestion.question)}
                 className="w-full h-[220px] p-6 border-2 border-cream-300 rounded-2xl focus:border-burgundy-600 focus:outline-none focus:ring-4 focus:ring-burgundy-600/10 resize-y text-warmGray-700 placeholder:text-warmGray-400 placeholder:italic leading-[1.7] font-body transition-all shadow-inner"
                 style={{ fontSize: '1.0625rem' }}
