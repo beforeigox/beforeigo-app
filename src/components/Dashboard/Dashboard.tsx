@@ -275,10 +275,15 @@ const purchasedStories: any[] = [];
                       onMouseEnter={(e) => e.currentTarget.style.color = '#8f1133'}
                       onMouseLeave={(e) => e.currentTarget.style.color = '#9ca3af'} />
               </div>
-              <h3 className="text-lg font-medium text-gray-900 mb-2">Start a New Story</h3>
-              <p className="text-gray-600 text-sm mb-4">
-                Create another beautiful legacy book to capture different aspects of your life
-              </p>
+             <h3 className="text-lg font-medium text-gray-900 mb-2">
+  {purchasedStories.length === 0 ? 'Start Your Story' : 'Start a New Story'}
+</h3>
+<p className="text-gray-600 text-sm mb-4">
+  {purchasedStories.length === 0 
+    ? 'Create a beautiful legacy book to capture different aspects of your life'
+    : 'Create another beautiful legacy book to capture different aspects of your life'
+  }
+</p>
               <div className="text-sm font-medium" style={{ color: '#8f1133' }}>
                 Start Writing →
               </div>
