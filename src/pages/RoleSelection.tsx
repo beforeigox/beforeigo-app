@@ -79,7 +79,7 @@ export function RoleSelection() {
                 onClick={() => setSelectedRole(role.id)}
                 className={`p-4 rounded-xl border-2 transition-all text-left ${
                   isSelected
-                    ? 'border-burgundy-500 bg-burgundy-50'
+                    ? 'border-burgundy-600 bg-burgundy-50'
                     : 'border-warmGray-200 hover:border-warmGray-300'
                 }`}
               >
