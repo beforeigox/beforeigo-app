@@ -105,6 +105,7 @@ export default function QuestionInterface({ story, questions, onBack }: Question
   const [responses, setResponses] = useState<Map<string, Response>>(new Map());
   const [currentAnswer, setCurrentAnswer] = useState('');
   const [currentImages, setCurrentImages] = useState<string[]>([]);
+  const [imageCaptions, setImageCaptions] = useState<string[]>([]);
   const [saving, setSaving] = useState(false);
   const [showToast, setShowToast] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
