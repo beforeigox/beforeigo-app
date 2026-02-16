@@ -193,7 +193,7 @@ export default function QuestionInterface({ story, questions, onBack }: Question
     return (
       <div className="min-h-screen bg-cream-100 flex items-center justify-center p-6">
         <div className="bg-white rounded-2xl shadow-lg p-8 max-w-md w-full text-center paper-texture">
-          <div className="w-16 h-16 bg-rose-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="w-16 h-16 bg-burgundy-50 rounded-full flex items-center justify-center mx-auto mb-4">
             <X className="w-8 h-8 text-burgundy-600" />
           </div>
           <h2 className="text-2xl font-serif font-semibold text-warmGray-700 mb-2">No Questions Available</h2>
@@ -215,8 +215,8 @@ export default function QuestionInterface({ story, questions, onBack }: Question
     return (
       <div className="min-h-screen bg-cream-100 flex items-center justify-center p-6">
         <div className="bg-white rounded-2xl shadow-lg p-8 max-w-md w-full text-center paper-texture">
-          <div className="w-16 h-16 bg-rose-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <Lightbulb className="w-8 h-8 text-burgundy-500" />
+          <div className="w-16 h-16 bg-burgundy-50 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Lightbulb className="w-8 h-8 text-burgundy-600" />
           </div>
           <h2 className="text-2xl font-serif font-semibold text-warmGray-700 mb-2">Loading...</h2>
           <p className="text-warmGray-600">Please wait while we load your questions.</p>
@@ -925,7 +925,7 @@ export default function QuestionInterface({ story, questions, onBack }: Question
       <div className="bg-white border-b border-cream-300 paper-texture sticky top-0 z-40">
         <div className="h-2 bg-cream-200 relative overflow-hidden">
           <div
-            className="absolute top-0 left-0 h-full bg-gradient-to-r from-burgundy-600 to-burgundy-500 transition-all duration-500"
+            className="absolute top-0 left-0 h-full bg-gradient-to-r from-burgundy-600 to-burgundy-600 transition-all duration-500"
             style={{ width: `${progressPercentage}%` }}
           >
             <div className="absolute inset-0 bg-white/10 animate-pulse-soft"></div>
@@ -1063,23 +1063,23 @@ export default function QuestionInterface({ story, questions, onBack }: Question
             <div className="bg-white rounded-2xl shadow-sm border border-cream-300 p-8 mb-6 paper-texture">
               <div className="mb-6">
                 <div className="flex items-center justify-between mb-6">
-                  <span className="inline-block px-5 py-1.5 bg-rose-100 text-burgundy-500 rounded-full text-xs font-semibold uppercase tracking-wider">
+                  <span className="inline-block px-5 py-1.5 bg-burgundy-50 text-burgundy-600 rounded-full text-xs font-semibold uppercase tracking-wider">
                     {currentQuestion.category}
                   </span>
                 </div>
 
                 {showCategoryQuote && currentCategoryQuote && (
                   <div className="mb-6 text-center animate-fade-in-slide">
-                    <svg className="w-8 h-8 text-burgundy-500/30 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-8 h-8 text-burgundy-600/30 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/>
                     </svg>
-                    <p className="font-body italic text-burgundy-500 text-base leading-relaxed max-w-2xl mx-auto">
+                    <p className="font-body italic text-burgundy-600 text-base leading-relaxed max-w-2xl mx-auto">
                       {currentCategoryQuote}
                     </p>
                     <div className="mt-6 flex items-center justify-center gap-2">
-                      <div className="w-12 h-px bg-burgundy-500/30"></div>
-                      <div className="w-1.5 h-1.5 rounded-full bg-burgundy-500/30"></div>
-                      <div className="w-12 h-px bg-burgundy-500/30"></div>
+                      <div className="w-12 h-px bg-burgundy-600/30"></div>
+                      <div className="w-1.5 h-1.5 rounded-full bg-burgundy-600/30"></div>
+                      <div className="w-12 h-px bg-burgundy-600/30"></div>
                     </div>
                   </div>
                 )}
@@ -1137,7 +1137,7 @@ export default function QuestionInterface({ story, questions, onBack }: Question
   }
 }}
                 placeholder={currentQuestion.placeholder || getPlaceholderText(currentQuestion.question)}
-                className="w-full h-[220px] p-6 border-2 border-cream-300 rounded-2xl focus:border-burgundy-500 focus:outline-none focus:ring-4 focus:ring-burgundy-500/10 resize-y text-warmGray-700 placeholder:text-warmGray-400 placeholder:italic leading-[1.7] font-body transition-all shadow-inner"
+                className="w-full h-[220px] p-6 border-2 border-cream-300 rounded-2xl focus:border-burgundy-600 focus:outline-none focus:ring-4 focus:ring-burgundy-600/10 resize-y text-warmGray-700 placeholder:text-warmGray-400 placeholder:italic leading-[1.7] font-body transition-all shadow-inner"
                 style={{ fontSize: '1.0625rem' }}
               />
 
@@ -1338,26 +1338,26 @@ export default function QuestionInterface({ story, questions, onBack }: Question
 
             <div className="bg-gradient-to-br from-rose-50 to-cream-100 rounded-2xl p-6 border border-cream-300 shadow-sm">
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-burgundy-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Lightbulb className="w-5 h-5 text-burgundy-500" />
+                <div className="w-10 h-10 bg-burgundy-600/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Lightbulb className="w-5 h-5 text-burgundy-600" />
                 </div>
                 <div>
                   <h3 className="font-serif font-semibold text-warmGray-700 mb-3 text-lg">Gentle Reminders</h3>
                   <ul className="space-y-2 text-warmGray-600 leading-relaxed">
                     <li className="flex items-start gap-2">
-                      <span className="text-burgundy-500 mt-1">•</span>
+                      <span className="text-burgundy-600 mt-1">•</span>
                       <span>Write as if you're having a conversation with someone you love</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-burgundy-500 mt-1">•</span>
+                      <span className="text-burgundy-600 mt-1">•</span>
                       <span>Small details bring memories to life—describe sounds, smells, feelings</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-burgundy-500 mt-1">•</span>
+                      <span className="text-burgundy-600 mt-1">•</span>
                       <span>Your authentic voice matters more than perfect grammar</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-burgundy-500 mt-1">•</span>
+                      <span className="text-burgundy-600 mt-1">•</span>
                       <span>Take all the time you need—this is your legacy</span>
                     </li>
                   </ul>
