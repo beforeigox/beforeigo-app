@@ -1126,6 +1126,7 @@ export default function QuestionInterface({ story, questions, onBack }: Question
       is_completed: isCompleted,
       updated_at: new Date().toISOString()
     }).eq('id', existingResponse.id);
+  await loadResponses();
   } else {
     await supabase.from('responses').insert({
       story_id: story.id,
@@ -1134,6 +1135,7 @@ export default function QuestionInterface({ story, questions, onBack }: Question
       image_urls: currentImages,
       is_completed: isCompleted
     });
+    await loadResponses();	
   }
 }}
                 placeholder={currentQuestion.placeholder || getPlaceholderText(currentQuestion.question)}

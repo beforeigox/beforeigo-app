@@ -28,7 +28,7 @@ export function LoginForm() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-rose-50 via-pink-50 to-burgundy-50 flex items-center justify-center px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#FAF7F2' }}>
       <div className="max-w-md w-full space-y-8">
         <div className="text-center">
           <div className="mx-auto h-12 w-12 flex items-center justify-center rounded-full bg-burgundy-100">
@@ -87,7 +87,7 @@ export function LoginForm() {
             </div>
 
             {error && (
-              <div className="flex items-center space-x-2 text-red-600 bg-red-50 p-3 rounded-lg">
+              <div className="flex items-center space-x-2 text-burgundy-600 bg-burgundy-50 p-3 rounded-lg">
                 <AlertCircle className="h-5 w-5" />
                 <span className="text-sm">{error}</span>
               </div>
@@ -101,14 +101,6 @@ export function LoginForm() {
               {loading ? 'Signing in...' : 'Sign In'}
             </button>
 
-            <div className="text-center">
-              <button
-                type="button"
-                onClick={fillDemoCredentials}
-                className="text-sm text-burgundy-600 hover:text-burgundy-700 font-medium"
-              >
-                Fill demo credentials
-              </button>
             </div>
           </form>
         </div>
