@@ -100,8 +100,6 @@ export function LoginForm() {
             >
               {loading ? 'Signing in...' : 'Sign In'}
             </button>
-
-            </div>
           </form>
         </div>
       </div>
