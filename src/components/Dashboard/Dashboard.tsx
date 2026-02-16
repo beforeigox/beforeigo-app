@@ -1,18 +1,39 @@
 import React from 'react';
 import { ArrowRight, BookOpen, Clock, Target, Plus, Gift, Star, Sparkles } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
+import { supabase } from '../../lib/supabase';
 import { upsellFeatures } from '../../utils/mockData';
 import { Link, useNavigate } from 'react-router-dom';
 
 export function Dashboard() {
   const { user } = useAuth();
   const navigate = useNavigate();
+  const [purchasedStories, setPurchasedStories] = React.useState<any[]>([]);
+  const [loading, setLoading] = React.useState(true);
+
+  React.useEffect(() => {
+    async function loadStories() {
+      if (!user?.id) return;
+
+      const { data, error } = await supabase
+        .from('Stories')
+        .select('*')
+        .eq('user_id', user.id)
+        .order('created_at', { ascending: false });
+
+      if (data) {
+        setPurchasedStories(data);
+      }
+      setLoading(false);
+    }
+    loadStories();
+  }, [user?.id]);
   
-  // TODO: Fetch real stories from Supabase
-const purchasedStories: any[] = [];
   const currentStory = purchasedStories.find(story => story.status === 'active') || purchasedStories[0];
   
-  const totalProgress = purchasedStories.reduce((acc, story) => acc + story.progress, 0) / purchasedStories.length;
+  const totalProgress = purchasedStories.length > 0 
+    ? purchasedStories.reduce((acc, story) => acc + story.progress, 0) / purchasedStories.length 
+    : 0;
 
   const handleStartNewStory = async () => {
   // Check if user has stories_remaining (we'll add this logic later)
