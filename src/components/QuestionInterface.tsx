@@ -747,44 +747,7 @@ export default function QuestionInterface({ story, questions, onBack }: Question
     console.error('Draft save failed:', error);
   }
 };
-      } else {
-        const { data, error } = await supabase
-          .from('responses')
-          .insert({
-            story_id: story.id,
-            question_id: currentQuestion.id,
-            answer: currentAnswer,
-            image_urls: currentImages,
-            is_completed: isCompleted
-          })
-          .select()
-          .single();
-
-        if (!error && data) {
-  await loadResponses();
-  
-  // Update Stories table progress
-  const { data: allResponses } = await supabase
-    .from('responses')
-    .select('*')
-    .eq('story_id', story.id);
-    
-  if (allResponses) {
-    const completedCount = allResponses.filter((r: any) => r.is_completed).length;
-    const progressPercent = Math.round((completedCount / totalQuestions) * 100);
-    
-    await supabase
-      .from('Stories')
-      .update({
-        answered_questions: completedCount,
-        progress: progressPercent,
-        updated_at: new Date().toISOString()
-      })
-      .eq('id', story.id);
-  }
-}
-      }
-
+      
       const newCompletedCount = completedCount + (isCompleted && !existingResponse?.is_completed ? 1 : 0);
       checkMilestone(newCompletedCount);
 
