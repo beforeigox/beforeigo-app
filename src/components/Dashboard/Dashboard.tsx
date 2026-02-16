@@ -79,7 +79,7 @@ export function Dashboard() {
               <div className="mb-6">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-sm font-medium" style={{ color: '#3A3A3A' }}>Progress</span>
-                  <span className="text-sm font-medium" style={{ color: '#6B5B73' }}>{currentStory.answeredQuestions}/{currentStory.totalQuestions} questions</span>
+                  <span className="text-sm font-medium" style={{ color: '#6B5B73' }}>{currentStory.answered_questions || 0}/{currentStory.total_questions || 72} questions</span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-3">
                   <div 
@@ -152,8 +152,8 @@ export function Dashboard() {
             </div>
             <div>
               <p className="text-2xl font-bold" style={{ color: '#3A3A3A' }}>
-                {purchasedStories.reduce((acc, story) => acc + story.answeredQuestions, 0)}
-              </p>
+  {purchasedStories.reduce((acc, story) => acc + (story.answered_questions || 0), 0)}
+</p>
               <p className="text-sm" style={{ color: '#6B5B73' }}>Questions Answered</p>
             </div>
           </div>
@@ -246,7 +246,7 @@ export function Dashboard() {
                   <div className="mb-4">
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-sm font-medium" style={{ color: '#3A3A3A' }}>Progress</span>
-                      <span className="text-sm" style={{ color: '#6B5B73' }}>{story.answeredQuestions}/{story.totalQuestions}</span>
+                      <span className="text-sm" style={{ color: '#6B5B73' }}>{story.answered_questions || 0}/{story.total_questions || 72}</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
                       <div 
