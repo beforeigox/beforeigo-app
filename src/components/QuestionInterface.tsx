@@ -1114,6 +1114,7 @@ export default function QuestionInterface({ story, questions, onBack }: Question
               <textarea
                 value={currentAnswer}
                 onChange={(e) => setCurrentAnswer(e.target.value)}
+		onBlur={saveResponse}
                 placeholder={currentQuestion.placeholder || getPlaceholderText(currentQuestion.question)}
                 className="w-full h-[220px] p-6 border-2 border-cream-300 rounded-2xl focus:border-burgundy-500 focus:outline-none focus:ring-4 focus:ring-burgundy-500/10 resize-y text-warmGray-700 placeholder:text-warmGray-400 placeholder:italic leading-[1.7] font-body transition-all shadow-inner"
                 style={{ fontSize: '1.0625rem' }}
@@ -1140,7 +1141,7 @@ export default function QuestionInterface({ story, questions, onBack }: Question
               )}
 
               {permissionError && (
-                <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-xl text-red-700 text-sm">
+                <div className="mt-4 p-4 bg-burgundy-50 border border-red-200 rounded-xl text-burgundy-700 text-sm">
                   {permissionError}
                 </div>
               )}
@@ -1351,9 +1352,9 @@ export default function QuestionInterface({ story, questions, onBack }: Question
           <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 paper-texture">
             <div className="text-center mb-6">
               <div className={`w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4 ${
-                isRecordingVoice ? 'bg-red-100 animate-pulse-soft' : 'bg-burgundy-100'
+                isRecordingVoice ? 'bg-burgundy-100 animate-pulse-soft' : 'bg-burgundy-100'
               }`}>
-                <Mic className={`w-10 h-10 ${isRecordingVoice ? 'text-red-600' : 'text-burgundy-600'}`} />
+                <Mic className={`w-10 h-10 ${isRecordingVoice ? 'text-burgundy-600' : 'text-burgundy-600'}`} />
               </div>
               <h3 className="text-2xl font-serif font-semibold text-warmGray-700 mb-2">
                 {isRecordingVoice ? 'Recording...' : voicePreviewUrl ? 'Voice Recording Complete' : 'Ready to Record'}
@@ -1396,7 +1397,7 @@ export default function QuestionInterface({ story, questions, onBack }: Question
               {isRecordingVoice ? (
                 <button
                   onClick={stopVoiceRecording}
-                  className="px-8 py-3 bg-red-600 text-white rounded-xl hover:bg-red-700 transition-all font-medium shadow-md"
+                  className="px-8 py-3 bg-burgundy-600 text-white rounded-xl hover:bg-burgundy-700 transition-all font-medium shadow-md"
                 >
                   Stop Recording
                 </button>
@@ -1442,7 +1443,7 @@ export default function QuestionInterface({ story, questions, onBack }: Question
 
             <div className="mb-6 bg-black rounded-xl overflow-hidden relative">
               {isRecordingVideo && (
-                <div className="absolute top-4 left-4 z-10 flex items-center gap-2 bg-red-600 text-white px-3 py-1.5 rounded-full text-sm font-medium">
+                <div className="absolute top-4 left-4 z-10 flex items-center gap-2 bg-burgundy-600 text-white px-3 py-1.5 rounded-full text-sm font-medium">
                   <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
                   REC
                 </div>
@@ -1470,7 +1471,7 @@ export default function QuestionInterface({ story, questions, onBack }: Question
               {isRecordingVideo ? (
                 <button
                   onClick={stopVideoRecording}
-                  className="px-8 py-3 bg-red-600 text-white rounded-xl hover:bg-red-700 transition-all font-medium shadow-md flex items-center gap-2"
+                  className="px-8 py-3 bg-burgundy-600 text-white rounded-xl hover:bg-burgundy-700 transition-all font-medium shadow-md flex items-center gap-2"
                 >
                   <div className="w-3 h-3 bg-white rounded-sm" />
                   Stop Recording
