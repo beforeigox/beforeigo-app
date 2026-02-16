@@ -43,9 +43,9 @@ export function Dashboard() {
 };
 
   const handleStoryClick = (storyid: string) => {
-    // Navigate to Conversation 2 with story_id parameter
-    navigate(`/questions?story_id=${storyId}`);
-  };
+  // Navigate to Conversation 2 with story_id parameter
+  navigate(`/questions?story_id=${storyid}`);
+};
 
   const handleUpgrade = (featureTitle: string, price: string) => {
     alert(`🎉 Upgrading to ${featureTitle} for ${price}!\n\nThis would redirect to payment processing.\nFor now, this is just a demo of the upgrade flow.`);
@@ -104,7 +104,7 @@ export function Dashboard() {
               {/* Demo: Show celebration link for completed stories */}
               {currentStory.progress === 100 && (
                 <Link
-                  to={`/celebration?story_id=${currentStory.storyId}`}
+                  to={`/celebration?story_id=${currentStory.id}`}
                   className="inline-flex items-center space-x-2 ml-4 px-6 py-3 rounded-xl font-medium transition-colors border-2"
                   style={{ borderColor: '#8f1133', color: '#8f1133' }}
                   onMouseEnter={(e) => {
