@@ -35,13 +35,14 @@ export default function QuestionInterfaceWrapper() {
         
         if (roleData) {
           // Flatten all questions from all categories
-          const allQuestions = roleData.categories.flatMap((cat: any) => 
-            cat.questions.map((q: any) => ({
-              ...q,
-              category: cat.name,
-              quote: cat.quote
-            }))
-          );
+          const allQuestions = roleData.categories.flatMap((cat: any, catIndex: number) => 
+  cat.questions.map((q: any, qIndex: number) => ({
+    ...q,
+    id: `${cat.name.toLowerCase().replace(/\s+/g, '_')}_${qIndex}`,
+    category: cat.name,
+    categoryQuote: cat.quote
+  }))
+);
           setQuestions(allQuestions);
         }
       }
