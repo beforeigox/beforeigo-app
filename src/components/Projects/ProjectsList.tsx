@@ -1,6 +1,5 @@
 import React from 'react';
 import { Plus, Calendar, ArrowRight, MoreHorizontal } from 'lucide-react';
-import { mockProjects } from '../../utils/mockData';
 import { Link, useNavigate } from 'react-router-dom';
 
 export function ProjectsList() {
@@ -47,7 +46,7 @@ export function ProjectsList() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {mockProjects.map((project) => (
+        {[].map((project) => (
           <div 
             key={project.id} 
             className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow cursor-pointer"
