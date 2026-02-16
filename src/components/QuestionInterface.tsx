@@ -1141,7 +1141,7 @@ export default function QuestionInterface({ story, questions, onBack }: Question
               )}
 
               {permissionError && (
-                <div className="mt-4 p-4 bg-burgundy-50 border border-red-200 rounded-xl text-burgundy-700 text-sm">
+               <div className="mt-4 p-4 rounded-xl text-sm" style={{ backgroundColor: '#fef2f2', border: '1px solid #fecaca', color: '#991b1b' }}>
                   {permissionError}
                 </div>
               )}
