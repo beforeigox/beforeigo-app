@@ -719,47 +719,34 @@ export default function QuestionInterface({ story, questions, onBack }: Question
     }
   };
 
-  const saveDraft = async () => {
+ const saveDraft = async () => {
   if (!currentQuestion) return;
   
   try {
-      const existingResponse = responses.get(currentQuestion.id);
-      const isCompleted = currentAnswer.trim().length > 0 || currentImages.length > 0;
-
-      if (existingResponse) {
-        const { error } = await supabase
-          .from('responses')
-          .update({
-            answer: currentAnswer,
-            image_urls: currentImages,
-            is_completed: isCompleted,
-            updated_at: new Date().toISOString()
-          })
-          .eq('id', existingResponse.id);
-
-        if (!error) {
-  await loadResponses();
-  
-  // Update Stories table progress
-  const { data: allResponses } = await supabase
-    .from('responses')
-    .select('*')
-    .eq('story_id', story.id);
+    const existingResponse = responses.get(currentQuestion.id);
     
-  if (allResponses) {
-    const completedCount = allResponses.filter((r: any) => r.is_completed).length;
-    const progressPercent = Math.round((completedCount / totalQuestions) * 100);
-    
-    await supabase
-      .from('Stories')
-      .update({
-        answered_questions: completedCount,
-        progress: progressPercent,
+    if (existingResponse) {
+      await supabase.from('responses').update({
+        answer: currentAnswer,
+        image_urls: currentImages,
+        is_completed: false,
         updated_at: new Date().toISOString()
-      })
-      .eq('id', story.id);
+      }).eq('id', existingResponse.id);
+    } else if (currentAnswer.trim().length > 0) {
+      await supabase.from('responses').insert({
+        story_id: story.id,
+        question_id: currentQuestion.id,
+        answer: currentAnswer,
+        image_urls: currentImages,
+        is_completed: false
+      });
+    }
+    
+    await loadResponses();
+  } catch (error) {
+    console.error('Draft save failed:', error);
   }
-}
+};
       } else {
         const { data, error } = await supabase
           .from('responses')
