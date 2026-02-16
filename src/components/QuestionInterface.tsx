@@ -317,19 +317,29 @@ export default function QuestionInterface({ story, questions, onBack }: Question
   }, [currentAnswer]);
 
   const loadResponses = async () => {
-    const { data, error } = await supabase
-      .from('responses')
-      .select('*')
-      .eq('story_id', story.id);
+  const { data, error } = await supabase
+    .from('responses')
+    .select('*')
+    .eq('story_id', story.id);
 
-    if (!error && data) {
-      const responseMap = new Map<string, Response>();
-      data.forEach((r: Response) => {
-        responseMap.set(r.question_id, r);
-      });
-      setResponses(responseMap);
+  if (!error && data) {
+    const responseMap = new Map<string, Response>();
+    data.forEach((r: Response) => {
+      responseMap.set(r.question_id, r);
+    });
+    setResponses(responseMap);
+    
+    // Jump to first unanswered question
+    const firstUnanswered = questions.findIndex(q => {
+      const response = responseMap.get(q.id);
+      return !response?.is_completed;
+    });
+    
+    if (firstUnanswered !== -1) {
+      setCurrentQuestionIndex(firstUnanswered);
     }
-  };
+  }
+};
 
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
