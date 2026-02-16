@@ -1567,7 +1567,6 @@ const saveResponse = async () => {
         chapterNumber={transitionChapter.number}
         onContinue={() => {
           setShowChapterTransition(false);
-          goToNext();
         }}
       />
 

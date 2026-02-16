@@ -19,7 +19,7 @@ export function ChapterTransition({
 
   return (
     <div className="fixed inset-0 bg-gradient-to-br from-cream-100 via-rose-50 to-cream-100 flex items-center justify-center z-50 p-6 animate-fade-in">
-      <div className="max-w-3xl w-full text-center animate-fade-in-slide">
+      <div className="max-w-3xl w-full text-center animate-fade-in-slide bg-white rounded-3xl p-12 shadow-2xl border border-cream-200">
         <div className="mb-8">
           <div className="inline-block px-6 py-2 bg-burgundy-600/10 text-burgundy-600 rounded-full text-sm font-semibold uppercase tracking-wider mb-6">
             Chapter {chapterNumber}
