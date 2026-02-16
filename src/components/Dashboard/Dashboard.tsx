@@ -42,7 +42,7 @@ export function Dashboard() {
   navigate('/role-selection');
 };
 
-  const handleStoryClick = (storyId: string) => {
+  const handleStoryClick = (storyid: string) => {
     // Navigate to Conversation 2 with story_id parameter
     navigate(`/questions?story_id=${storyId}`);
   };
@@ -91,7 +91,7 @@ export function Dashboard() {
               </div>
 
               <button
-                onClick={() => handleStoryClick(currentStory.Id)}
+                onClick={() => handleStoryClick(currentStory.id)}
                 className="inline-flex items-center space-x-2 px-6 py-3 rounded-xl font-medium transition-colors group"
                 style={{ backgroundColor: '#8f1133', color: 'white' }}
                 onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#7a0e2b'}
@@ -193,7 +193,7 @@ export function Dashboard() {
             {purchasedStories.map((story) => (
               <div
                 key={story.id}
-                onClick={() => handleStoryClick(story.Id)}
+                onClick={() => handleStoryClick(story.id)}
                 className="bg-white rounded-2xl border border-gray-100 overflow-hidden transition-all cursor-pointer group hover:transform hover:-translate-y-1"
                 style={{ boxShadow: '0 4px 6px -1px rgba(143, 17, 51, 0.1)' }}
                 onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(143, 17, 51, 0.2)'}
