@@ -722,8 +722,28 @@ export default function QuestionInterface({ story, questions, onBack }: Question
           .eq('id', existingResponse.id);
 
         if (!error) {
-          await loadResponses();
-        }
+  await loadResponses();
+  
+  // Update Stories table progress
+  const { data: allResponses } = await supabase
+    .from('responses')
+    .select('*')
+    .eq('story_id', story.id);
+    
+  if (allResponses) {
+    const completedCount = allResponses.filter((r: any) => r.is_completed).length;
+    const progressPercent = Math.round((completedCount / totalQuestions) * 100);
+    
+    await supabase
+      .from('Stories')
+      .update({
+        answered_questions: completedCount,
+        progress: progressPercent,
+        updated_at: new Date().toISOString()
+      })
+      .eq('id', story.id);
+  }
+}
       } else {
         const { data, error } = await supabase
           .from('responses')
@@ -738,8 +758,28 @@ export default function QuestionInterface({ story, questions, onBack }: Question
           .single();
 
         if (!error && data) {
-          await loadResponses();
-        }
+  await loadResponses();
+  
+  // Update Stories table progress
+  const { data: allResponses } = await supabase
+    .from('responses')
+    .select('*')
+    .eq('story_id', story.id);
+    
+  if (allResponses) {
+    const completedCount = allResponses.filter((r: any) => r.is_completed).length;
+    const progressPercent = Math.round((completedCount / totalQuestions) * 100);
+    
+    await supabase
+      .from('Stories')
+      .update({
+        answered_questions: completedCount,
+        progress: progressPercent,
+        updated_at: new Date().toISOString()
+      })
+      .eq('id', story.id);
+  }
+}
       }
 
       const newCompletedCount = completedCount + (isCompleted && !existingResponse?.is_completed ? 1 : 0);
