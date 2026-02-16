@@ -266,6 +266,7 @@ export default function QuestionInterface({ story, questions, onBack }: Question
       const response = responses.get(currentQuestion.id);
       setCurrentAnswer(response?.answer || '');
       setCurrentImages(response?.image_urls || []);
+      setImageCaptions(response?.image_captions || []);
       stopAudio();
 
       const savedMedia = questionMediaRef.current.get(currentQuestion.id);
@@ -358,6 +359,7 @@ export default function QuestionInterface({ story, questions, onBack }: Question
       reader.onloadend = () => {
         const result = reader.result as string;
         setCurrentImages(prev => [...prev, result]);
+        setImageCaptions(prev => [...prev, '']); // Add empty caption
       };
       reader.readAsDataURL(file);
     });
@@ -369,6 +371,7 @@ export default function QuestionInterface({ story, questions, onBack }: Question
 
   const removeImage = (index: number) => {
     setCurrentImages(prev => prev.filter((_, i) => i !== index));
+    setImageCaptions(prev => prev.filter((_, i) => i !== index));
   };
 
   const stopAudio = () => {
@@ -730,6 +733,7 @@ export default function QuestionInterface({ story, questions, onBack }: Question
       await supabase.from('responses').update({
         answer: currentAnswer,
         image_urls: currentImages,
+	image_captions: imageCaptions,
         is_completed: false,
         updated_at: new Date().toISOString()
       }).eq('id', existingResponse.id);
@@ -739,6 +743,7 @@ export default function QuestionInterface({ story, questions, onBack }: Question
         question_id: currentQuestion.id,
         answer: currentAnswer,
         image_urls: currentImages,
+	image_captions: imageCaptions,
         is_completed: false
       });
     }
@@ -760,6 +765,7 @@ const saveResponse = async () => {
       const { error } = await supabase.from('responses').update({
         answer: currentAnswer,
         image_urls: currentImages,
+	image_captions: imageCaptions,
         is_completed: isCompleted,
         updated_at: new Date().toISOString()
       }).eq('id', existingResponse.id);
@@ -789,6 +795,7 @@ const saveResponse = async () => {
         question_id: currentQuestion.id,
         answer: currentAnswer,
         image_urls: currentImages,
+	image_captions: imageCaptions,
         is_completed: isCompleted
       }).select().single();
       
@@ -1133,25 +1140,38 @@ const saveResponse = async () => {
                 style={{ fontSize: '1.0625rem' }}
               />
 
-              {currentImages.length > 0 && (
-                <div className="flex flex-wrap gap-4 mt-4">
-                  {currentImages.map((img, idx) => (
-                    <div key={idx} className="relative group">
-                      <img
-                        src={img}
-                        alt={`Memory ${idx + 1}`}
-                        className="w-32 h-32 object-cover rounded-xl border-2 border-cream-300 shadow-sm"
-                      />
-                      <button
-                        onClick={() => removeImage(idx)}
-                        className="absolute -top-2 -right-2 bg-burgundy-600 text-white rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-all shadow-md"
-                      >
-                        <X className="w-4 h-4" />
-                      </button>
-                    </div>
-                  ))}
-                </div>
-              )}
+             {currentImages.length > 0 && (
+  <div className="flex flex-wrap gap-4 mt-4">
+    {currentImages.map((img, idx) => (
+      <div key={idx} className="relative">
+        <div className="relative group">
+          <img
+            src={img}
+            alt={`Memory ${idx + 1}`}
+            className="w-32 h-32 object-cover rounded-xl border-2 border-cream-300 shadow-sm"
+          />
+          <button
+            onClick={() => removeImage(idx)}
+            className="absolute -top-2 -right-2 bg-burgundy-600 text-white rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-all shadow-md"
+          >
+            <X className="w-4 h-4" />
+          </button>
+        </div>
+        <input
+          type="text"
+          value={imageCaptions[idx] || ''}
+          onChange={(e) => {
+            const newCaptions = [...imageCaptions];
+            newCaptions[idx] = e.target.value;
+            setImageCaptions(newCaptions);
+          }}
+          placeholder="Add context (who's in this photo?)"
+          className="mt-2 w-32 px-2 py-1 text-xs border border-cream-300 rounded-lg focus:border-burgundy-600 focus:outline-none"
+        />
+      </div>
+    ))}
+  </div>
+)}
 
               {permissionError && (
                <div className="mt-4 p-4 rounded-xl text-sm" style={{ backgroundColor: '#fef2f2', border: '1px solid #fecaca', color: '#991b1b' }}>
