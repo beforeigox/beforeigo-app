@@ -14,10 +14,12 @@ const purchasedStories: any[] = [];
   
   const totalProgress = purchasedStories.reduce((acc, story) => acc + story.progress, 0) / purchasedStories.length;
 
-  const handleStartNewStory = () => {
-    alert('🎉 Starting a new story!\n\nThis would redirect to Conversation 1 for the purchase flow.\n\nFor now, this is a demo of the new story creation process.');
-    // In production: navigate to Conversation 1 purchase flow
-  };
+  const handleStartNewStory = async () => {
+  // Check if user has stories_remaining (we'll add this logic later)
+  // For now, just allow creation
+  
+  navigate('/role-selection');
+};
 
   const handleStoryClick = (storyId: string) => {
     // Navigate to Conversation 2 with story_id parameter

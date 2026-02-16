@@ -4,6 +4,7 @@ import { AuthProvider, useAuth } from './contexts/AuthContext';
 import { LoginForm } from './components/Auth/LoginForm';
 import { GiftChoice } from './pages/GiftChoice';
 import { SignUpForm } from './components/Auth/SignUpForm';
+import { RoleSelection } from './pages/RoleSelection';
 import { Navigation } from './components/Layout/Navigation';
 import { Dashboard } from './components/Dashboard/Dashboard';
 import { ProjectsList } from './components/Projects/ProjectsList';
@@ -49,6 +50,7 @@ function AppContent() {
 	  path="/signup" 
 	  element={isAuthenticated ? <Navigate to="/dashboard" /> : <SignUpForm />} 
 	/>
+	<Route path="/role-selection" element={<RoleSelection />} />
         <Route
           path="/dashboard"
           element={
