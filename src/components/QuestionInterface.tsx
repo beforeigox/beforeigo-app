@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Question, Response, Story, StorytellerRole } from '../types';
-import { supabase } from '../supabase';
+import { supabase } from '../lib/supabase';
 import { ArrowLeft, Share2, Download, Mic, Video, Save, Lightbulb, Image as ImageIcon, X, Volume2, VolumeX, Check, ChevronDown, ChevronRight, Loader2, Pause, Play, Sparkles, CheckCircle } from 'lucide-react';
 import { generateSpeech, isElevenLabsAvailable } from '../services/elevenLabsService';
 import { UpgradeModal } from './UpgradeModal';

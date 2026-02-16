@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { supabase } from '../supabase';
+import { supabase } from '../lib/supabase';
 import QuestionInterface from './QuestionInterface';
 import questionsData from '../data/before_i_go_questions_master.json';
 
@@ -30,8 +30,8 @@ export default function QuestionInterfaceWrapper() {
         
         // Find the questions for this story's role
         const roleData = (questionsData as any).roles.find(
-          (r: any) => r.id === storyData.role.toLowerCase()
-        );
+  	(r: any) => r.id.toLowerCase() === storyData.role.toLowerCase()
+	);
         
         if (roleData) {
           // Flatten all questions from all categories
