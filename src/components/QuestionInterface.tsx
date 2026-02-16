@@ -307,9 +307,16 @@ export default function QuestionInterface({ story, questions, onBack }: Question
         newSet.add(currentQuestion.category);
         return newSet;
       });
+	// Scroll active question into view
+      setTimeout(() => {
+        const activeButton = document.querySelector('.bg-burgundy-600.text-white.shadow-md');
+        if (activeButton) {
+          activeButton.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      }, 100);
     }
   }, [currentQuestionIndex, responses, currentQuestion]);
-
+    
   useEffect(() => {
     if (currentAnswer.trim().length > 0 && showCategoryQuote) {
       setShowCategoryQuote(false);
