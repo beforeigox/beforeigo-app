@@ -20,7 +20,7 @@ export default function QuestionInterfaceWrapper() {
 
       // Load story from Supabase
       const { data: storyData } = await supabase
-        .from('stories')
+        .from('Stories')
         .select('*')
         .eq('id', storyId)
         .single();
