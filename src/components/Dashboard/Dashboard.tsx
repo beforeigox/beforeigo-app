@@ -239,7 +239,7 @@ export function Dashboard() {
                     </div>
                     <div className="flex items-center space-x-1 text-xs" style={{ color: '#6B5B73' }}>
                       <Clock className="h-3 w-3" />
-                      <span>{new Date(story.lastUpdated).toLocaleDateString()}</span>
+                      <span>Updated {new Date(story.updated_at || story.created_at).toLocaleDateString()}</span>
                     </div>
                   </div>
 
