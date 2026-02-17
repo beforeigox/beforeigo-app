@@ -1556,7 +1556,6 @@ const saveResponse = async () => {
         imagesAdded={getTotalImagesAdded()}
         audioRecordings={getTotalAudioRecordings()}
         onViewStory={() => {
-         onViewStory={() => {
  	 window.location.href = '/view';
 }}
         }}
