@@ -6,6 +6,7 @@ import { GiftChoice } from './pages/GiftChoice';
 import { SignUpForm } from './components/Auth/SignUpForm';
 import { RoleSelection } from './pages/RoleSelection';
 import { AddStory } from './pages/AddStory';
+import { StoryShare } from './pages/StoryShare';
 import { Navigation } from './components/Layout/Navigation';
 import { Dashboard } from './components/Dashboard/Dashboard';
 import { ProjectsList } from './components/Projects/ProjectsList';
@@ -53,6 +54,7 @@ function AppContent() {
 	/>
 	<Route path="/role-selection" element={<RoleSelection />} />
 	<Route path="/add-story" element={<AddStory />} />
+	<Route path="/share/:story_id" element={<StoryShare />} />
         <Route
           path="/dashboard"
           element={
