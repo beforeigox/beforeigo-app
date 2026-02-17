@@ -165,10 +165,17 @@ export default function QuestionInterface({ story, questions, onBack }: Question
     }
   }, [showVideoRecorder]);
 
-  const hasPremiumAccess = () => {
-    return userPlan === 'keepsake' || userPlan === 'legacy';
-  };
+  const hasVoiceAccess = () => {
+  return userPlan === 'keepsake' || userPlan === 'legacy';
+};
 
+const hasVideoAccess = () => {
+  return userPlan === 'legacy';
+};
+
+const hasPremiumAccess = () => {
+  return userPlan === 'keepsake' || userPlan === 'legacy';
+};
   const handleAudioRecordingClick = () => {
     if (hasPremiumAccess()) {
       startVoiceRecording();
@@ -179,13 +186,13 @@ export default function QuestionInterface({ story, questions, onBack }: Question
   };
 
   const handleVideoRecordingClick = () => {
-    if (hasPremiumAccess()) {
-      startVideoRecording();
-    } else {
-      setUpgradeFeature('video');
-      setShowUpgradeModal(true);
-    }
-  };
+  if (hasVideoAccess()) {
+    startVideoRecording();
+  } else {
+    setUpgradeFeature('video');
+    setShowUpgradeModal(true);
+  }
+};
 
   const currentQuestion = questions[currentQuestionIndex];
   const totalQuestions = questions.length;
@@ -241,7 +248,7 @@ export default function QuestionInterface({ story, questions, onBack }: Question
   useEffect(() => {
     const loadUserPlan = async () => {
       const { data } = await supabase
-        .from('stories')
+        .from('Stories')
         .select('plan')
         .eq('id', story.id)
         .single();
