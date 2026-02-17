@@ -306,11 +306,10 @@ const hasPremiumAccess = () => {
         setVideoRecordingTime(0);
       }
 
-      if (previousCategory !== currentQuestion.category) {
+    
         setShowCategoryQuote(true);
         setPreviousCategory(currentQuestion.category);
-      }
-
+      
       setExpandedCategories(prev => {
         const newSet = new Set(prev);
         newSet.add(currentQuestion.category);
@@ -325,12 +324,6 @@ const hasPremiumAccess = () => {
       }, 100);
     }
   }, [currentQuestionIndex, responses, currentQuestion]);
-    
-  useEffect(() => {
-    if (currentAnswer.trim().length > 0 && showCategoryQuote) {
-      setShowCategoryQuote(false);
-    }
-  }, [currentAnswer]);
 
   const loadResponses = async () => {
   const { data, error } = await supabase
@@ -1563,7 +1556,9 @@ const saveResponse = async () => {
         imagesAdded={getTotalImagesAdded()}
         audioRecordings={getTotalAudioRecordings()}
         onViewStory={() => {
-          window.location.href = '/';
+         onViewStory={() => {
+ 	 window.location.href = '/view';
+}}
         }}
       />
 
