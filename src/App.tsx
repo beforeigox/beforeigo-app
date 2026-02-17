@@ -69,14 +69,14 @@ function AppContent() {
             </PrivateRoute>
           }
         />
-        <Route
-          path="/upsells"
-          element={
-            <PrivateRoute>
-              <UpgradeOptions />
-            </PrivateRoute>
-          }
-        />
+       <Route
+  path="/enhance"
+  element={
+    <PrivateRoute>
+      <UpgradeOptions />
+    </PrivateRoute>
+  }
+/>
         <Route
   path="/view"
   element={

@@ -10,7 +10,7 @@ export function Navigation() {
   const navItems = [
     { path: '/dashboard', icon: Home, label: 'Dashboard' },
     { path: '/projects', icon: FolderOpen, label: 'My Stories' },
-    { path: '/upsells', icon: Sparkles, label: 'Enhance' },
+    { path: '/enhance', icon: Sparkles, label: 'Enhance' },
     { path: '/view', icon: Download, label: 'Export & Share' },
   ];
 
