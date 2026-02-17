@@ -78,13 +78,13 @@ function AppContent() {
           }
         />
         <Route
-          path="/export"
-          element={
-            <PrivateRoute>
-              <ExportPage />
-            </PrivateRoute>
-          }
-        />
+  path="/view"
+  element={
+    <PrivateRoute>
+      <ExportPage />
+    </PrivateRoute>
+  }
+/>
        <Route
           path="/questions"
           element={

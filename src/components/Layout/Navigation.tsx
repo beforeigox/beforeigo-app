@@ -11,7 +11,7 @@ export function Navigation() {
     { path: '/dashboard', icon: Home, label: 'Dashboard' },
     { path: '/projects', icon: FolderOpen, label: 'My Stories' },
     { path: '/upsells', icon: Sparkles, label: 'Enhance' },
-    { path: '/export', icon: Download, label: 'Export & Share' },
+    { path: '/view', icon: Download, label: 'Export & Share' },
   ];
 
   const isActive = (path: string) => location.pathname === path;
