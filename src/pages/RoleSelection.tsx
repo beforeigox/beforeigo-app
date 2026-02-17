@@ -22,39 +22,48 @@ export function RoleSelection() {
   const [creating, setCreating] = useState(false);
 
   const handleCreateStory = async () => {
-    if (!selectedRole || !user) return;
+  if (!selectedRole || !user) return;
+  setCreating(true);
+  try {
+    // Check if user already has a story
+    const { data: existingStories } = await supabase
+      .from('Stories')
+      .select('id')
+      .eq('user_id', user.id);
 
-    setCreating(true);
-    try {
-      const roleLabel = roles.find(r => r.id === selectedRole)?.label || selectedRole;
-      
-      const { data, error } = await supabase
-        .from('Stories')
-        .insert([{
-          user_id: user.id,
-          role: roleLabel,
-          title: `${roleLabel}'s Story`,
-          description: `My story as a ${roleLabel.toLowerCase()}`,
-          progress: 0,
-          total_questions: 72,
-          answered_questions: 0,
-          status: 'active'
-        }])
-        .select()
-        .single();
-
-      if (error) throw error;
-
-      // Redirect to questions with story_id
-      navigate(`/questions?story_id=${data.id}`);
-
-    } catch (error: any) {
-      console.error('Error creating story:', error);
-      alert('Failed to create story. Please try again.');
-    } finally {
+    if (existingStories && existingStories.length >= 1) {
+      alert('You already have an active story! Complete or upgrade to create another.');
       setCreating(false);
+      return;
     }
-  };
+
+    const roleLabel = roles.find(r => r.id === selectedRole)?.label || selectedRole;
+    
+    const { data, error } = await supabase
+      .from('Stories')
+      .insert([{
+        user_id: user.id,
+        role: roleLabel,
+        title: `${roleLabel}'s Story`,
+        description: `My story as a ${roleLabel.toLowerCase()}`,
+        progress: 0,
+        total_questions: 72,
+        answered_questions: 0,
+        status: 'active'
+      }])
+      .select()
+      .single();
+
+    if (error) throw error;
+
+    navigate(`/questions?story_id=${data.id}`);
+  } catch (error: any) {
+    console.error('Error creating story:', error);
+    alert('Failed to create story. Please try again.');
+  } finally {
+    setCreating(false);
+  }
+};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-cream-50 to-burgundy-50 flex items-center justify-center p-4">
