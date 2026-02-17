@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { ArrowRight, BookOpen, ChefHat, Check } from 'lucide-react';
 
-const RECIPE_STRIPE_LINK = 'https://buy.stripe.com/your-recipe-link';
+const RECIPE_STRIPE_LINK = 'https://www.beforeigo.app/checkout'; // UPDATE with Stripe link when live
 
 export function AddStory() {
   const navigate = useNavigate();
@@ -19,7 +19,7 @@ export function AddStory() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div
-            onClick={() => navigate('/checkout')}
+            onClick={() => window.location.href = 'https://www.beforeigo.app/checkout'}
             className="bg-white rounded-2xl p-8 cursor-pointer group transition-all border border-gray-100"
             style={{ boxShadow: '0 4px 6px -1px rgba(143, 17, 51, 0.1)' }}
             onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(143, 17, 51, 0.2)'}
