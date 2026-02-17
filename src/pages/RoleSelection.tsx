@@ -57,7 +57,7 @@ export function RoleSelection() {
 
     if (error) throw error;
 
-    navigate(`/questions?story_id=${data.id}`);
+navigate(`/questions?story_id=${data.id}`);
   } catch (error: any) {
     console.error('Error creating story:', error);
     alert('Failed to create story. Please try again.');
@@ -66,7 +66,8 @@ export function RoleSelection() {
   }
 };
 
-  return (
+return (
+  <>
     <div className="min-h-screen bg-gradient-to-br from-cream-50 to-burgundy-50 flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl shadow-xl p-8 max-w-2xl w-full">
         <div className="text-center mb-8">
@@ -77,12 +78,10 @@ export function RoleSelection() {
             Select the role that best describes your story
           </p>
         </div>
-
         <div className="grid grid-cols-2 gap-4 mb-8">
           {roles.map((role) => {
             const Icon = role.icon;
             const isSelected = selectedRole === role.id;
-            
             return (
               <button
                 key={role.id}
@@ -100,11 +99,10 @@ export function RoleSelection() {
             );
           })}
         </div>
-
         <button
           onClick={handleCreateStory}
           disabled={!selectedRole || creating}
-          className="w-full bg-burgundy-600 text-white py-4 rounded-xl font-semibold hover:from-burgundy-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+          className="w-full bg-burgundy-600 text-white py-4 rounded-xl font-semibold hover:bg-burgundy-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
         >
           {creating ? (
             <>
@@ -150,5 +148,6 @@ export function RoleSelection() {
         </div>
       </div>
     )}
+  </>
   );
 }
