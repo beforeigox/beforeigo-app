@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { User, Users, Heart, Baby, GraduationCap, ArrowRight } from 'lucide-react';
+import { User, Users, Heart, Baby, GraduationCap, ArrowRight, BookOpen } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import { supabase } from '../lib/supabase';
 
@@ -20,6 +20,7 @@ export function RoleSelection() {
   const { user } = useAuth();
   const [selectedRole, setSelectedRole] = useState('');
   const [creating, setCreating] = useState(false);
+  const [showLimitModal, setShowLimitModal] = useState(false);
 
   const handleCreateStory = async () => {
   if (!selectedRole || !user) return;
@@ -32,9 +33,9 @@ export function RoleSelection() {
       .eq('user_id', user.id);
 
     if (existingStories && existingStories.length >= 1) {
-      alert('You already have an active story! Complete or upgrade to create another.');
-      setCreating(false);
-      return;
+      setShowLimitModal(true);
+	setCreating(false);
+	return;
     }
 
     const roleLabel = roles.find(r => r.id === selectedRole)?.label || selectedRole;
@@ -119,5 +120,35 @@ export function RoleSelection() {
         </button>
       </div>
     </div>
+
+    {showLimitModal && (
+      <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-6">
+        <div className="bg-white rounded-2xl p-8 max-w-md w-full text-center shadow-2xl">
+          <div className="w-16 h-16 bg-burgundy-50 rounded-full flex items-center justify-center mx-auto mb-4">
+            <BookOpen className="h-8 w-8 text-burgundy-600" />
+          </div>
+          <h3 className="text-2xl font-serif font-bold text-warmGray-900 mb-3">
+            One Story at a Time
+          </h3>
+          <p className="text-warmGray-600 mb-6">
+            You already have an active story! Finish your current story or upgrade to create multiple stories.
+          </p>
+          <div className="flex gap-3">
+            <button
+              onClick={() => navigate('/dashboard')}
+              className="flex-1 py-3 bg-burgundy-600 text-white rounded-xl font-medium hover:bg-burgundy-700 transition-colors"
+            >
+              Back to Dashboard
+            </button>
+            <button
+              onClick={() => setShowLimitModal(false)}
+              className="flex-1 py-3 border-2 border-burgundy-600 text-burgundy-600 rounded-xl font-medium hover:bg-burgundy-50 transition-colors"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    )}
   );
 }
