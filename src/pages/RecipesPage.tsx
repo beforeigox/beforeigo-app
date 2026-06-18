@@ -12,6 +12,8 @@ import {
   Users,
   Check,
   BookOpen,
+  Lock,
+  Sparkles,
 } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 
@@ -56,6 +58,8 @@ const CATEGORY_EMOJI: Record<string, string> = {
   Other: '🍽️',
 };
 
+const RECIPE_UNLOCK_LINK = 'https://buy.stripe.com/cNi9AM5wR86R3y54xF3gk01';
+
 const emptyDraft: RecipeDraft = {
   title: '',
   category: 'Mains',
@@ -75,6 +79,7 @@ export function RecipesPage() {
 
   const [recipes, setRecipes] = useState<Recipe[]>([]);
   const [loading, setLoading] = useState(true);
+  const [hasAccess, setHasAccess] = useState<boolean | null>(null);
   const [activeCategory, setActiveCategory] = useState<string>('All');
   const [showEditor, setShowEditor] = useState(false);
   const [editing, setEditing] = useState<Recipe | null>(null);
@@ -91,9 +96,23 @@ export function RecipesPage() {
           data: { user },
         } = await supabase.auth.getUser();
         if (!user) {
+          if (active) {
+            setHasAccess(false);
+            setLoading(false);
+          }
+          return;
+        }
+
+        // Determine recipe access from the plan stored at signup
+        const plan = (user.user_metadata?.plan as string) || '';
+        const access = plan.includes('_recipe') || plan === 'legacy';
+        if (active) setHasAccess(access);
+
+        if (!access) {
           if (active) setLoading(false);
           return;
         }
+
         const { data, error } = await supabase
           .from('recipes')
           .select('*')
@@ -201,7 +220,7 @@ export function RecipesPage() {
             <button
               onClick={() => setShowEditor(true)}
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-transform hover:-translate-y-0.5"
-              style={{ backgroundColor: 'white', color: '#8f1133' }}
+              style={{ backgroundColor: 'white', color: '#8f1133', display: hasAccess ? 'inline-flex' : 'none' }}
             >
               <Plus className="h-5 w-5" />
               Add Recipe
@@ -212,46 +231,52 @@ export function RecipesPage() {
 
       {/* Body */}
       <div className="max-w-6xl mx-auto px-6 py-10">
-        {/* Category filter */}
-        {recipes.length > 0 && (
-          <div className="flex flex-wrap gap-2 mb-8">
-            {usedCategories.map((cat) => {
-              const isActive = activeCategory === cat;
-              return (
-                <button
-                  key={cat}
-                  onClick={() => setActiveCategory(cat)}
-                  className="px-4 py-2 rounded-full text-sm font-medium transition-all"
-                  style={
-                    isActive
-                      ? { backgroundColor: '#8f1133', color: 'white' }
-                      : { backgroundColor: 'white', color: '#6B5B73', border: '1px solid #EADBE0' }
-                  }
-                >
-                  {cat === 'All' ? 'All Recipes' : `${CATEGORY_EMOJI[cat]} ${cat}`}
-                </button>
-              );
-            })}
-          </div>
-        )}
-
-        {loading ? (
-          <LoadingState />
-        ) : recipes.length === 0 ? (
-          <EmptyState onAdd={() => setShowEditor(true)} />
+        {hasAccess === false ? (
+          <LockedState />
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filtered.map((recipe) => (
-              <RecipeGridCard key={recipe.id} recipe={recipe} onClick={() => setViewing(recipe)} />
-            ))}
-          </div>
+          <>
+            {/* Category filter */}
+            {recipes.length > 0 && (
+              <div className="flex flex-wrap gap-2 mb-8">
+                {usedCategories.map((cat) => {
+                  const isActive = activeCategory === cat;
+                  return (
+                    <button
+                      key={cat}
+                      onClick={() => setActiveCategory(cat)}
+                      className="px-4 py-2 rounded-full text-sm font-medium transition-all"
+                      style={
+                        isActive
+                          ? { backgroundColor: '#8f1133', color: 'white' }
+                          : { backgroundColor: 'white', color: '#6B5B73', border: '1px solid #EADBE0' }
+                      }
+                    >
+                      {cat === 'All' ? 'All Recipes' : `${CATEGORY_EMOJI[cat]} ${cat}`}
+                    </button>
+                  );
+                })}
+              </div>
+            )}
+
+            {loading ? (
+              <LoadingState />
+            ) : recipes.length === 0 ? (
+              <EmptyState onAdd={() => setShowEditor(true)} />
+            ) : (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {filtered.map((recipe) => (
+                  <RecipeGridCard key={recipe.id} recipe={recipe} onClick={() => setViewing(recipe)} />
+                ))}
+              </div>
+            )}
+          </>
         )}
       </div>
 
-      {showEditor && (
+      {hasAccess && showEditor && (
         <RecipeEditor onClose={() => setShowEditor(false)} onSaved={handleSaved} />
       )}
-      {editing && (
+      {hasAccess && editing && (
         <RecipeEditor
           existing={editing}
           onClose={() => setEditing(null)}
@@ -330,6 +355,72 @@ function RecipeGridCard({ recipe, onClick }: { recipe: Recipe; onClick: () => vo
               <Users className="h-3.5 w-3.5" /> {recipe.servings}
             </span>
           )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Locked state (no recipe access)
+// ---------------------------------------------------------------------------
+function LockedState() {
+  const features = [
+    'Save unlimited family recipes',
+    'Add a photo to every dish',
+    'Organize by category',
+    'Beautiful printable cookbook format',
+    'Preserved forever alongside your story',
+  ];
+  return (
+    <div className="max-w-xl mx-auto">
+      <div
+        className="bg-white rounded-3xl overflow-hidden border"
+        style={{ borderColor: '#F0E0E5', boxShadow: '0 10px 30px -10px rgba(143, 17, 51, 0.2)' }}
+      >
+        <div className="px-8 pt-10 pb-8 text-center">
+          <div
+            className="w-20 h-20 rounded-3xl flex items-center justify-center mx-auto mb-6"
+            style={{ backgroundColor: '#F5E6EA' }}
+          >
+            <Lock className="h-9 w-9" style={{ color: '#8f1133' }} />
+          </div>
+          <h2
+            className="text-3xl font-bold mb-3"
+            style={{ color: '#3A3A3A', fontFamily: 'Crimson Text, serif' }}
+          >
+            Unlock Your Recipe Book
+          </h2>
+          <p className="mb-8 max-w-md mx-auto" style={{ color: '#6B5B73' }}>
+            Turn your family's most treasured recipes into a beautiful keepsake
+            cookbook — preserved for generations, right alongside your story.
+          </p>
+
+          <ul className="text-left space-y-3 mb-8 max-w-sm mx-auto">
+            {features.map((f) => (
+              <li key={f} className="flex items-center gap-3 text-sm" style={{ color: '#3A3A3A' }}>
+                <div
+                  className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center"
+                  style={{ backgroundColor: '#F5E6EA' }}
+                >
+                  <Check className="h-3 w-3" style={{ color: '#8f1133' }} />
+                </div>
+                {f}
+              </li>
+            ))}
+          </ul>
+
+          <a
+            href={RECIPE_UNLOCK_LINK}
+            className="inline-flex items-center justify-center gap-2 w-full max-w-sm py-4 rounded-xl font-bold text-white transition-transform hover:-translate-y-0.5"
+            style={{ backgroundColor: '#8f1133' }}
+          >
+            <Sparkles className="h-5 w-5" />
+            Unlock for $8
+          </a>
+          <p className="mt-4 text-xs" style={{ color: '#9B8A93' }}>
+            One-time payment · Yours forever
+          </p>
         </div>
       </div>
     </div>
