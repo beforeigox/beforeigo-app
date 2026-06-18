@@ -7,6 +7,7 @@ import {
   X,
   Camera,
   Trash2,
+  Pencil,
   Clock,
   Users,
   Check,
@@ -76,6 +77,7 @@ export function RecipesPage() {
   const [loading, setLoading] = useState(true);
   const [activeCategory, setActiveCategory] = useState<string>('All');
   const [showEditor, setShowEditor] = useState(false);
+  const [editing, setEditing] = useState<Recipe | null>(null);
   const [viewing, setViewing] = useState<Recipe | null>(null);
 
   // -------------------------------------------------------------------------
@@ -113,6 +115,17 @@ export function RecipesPage() {
   const handleSaved = (recipe: Recipe) => {
     setRecipes((prev) => [recipe, ...prev]);
     setShowEditor(false);
+  };
+
+  const handleUpdated = (recipe: Recipe) => {
+    setRecipes((prev) => prev.map((r) => (r.id === recipe.id ? recipe : r)));
+    setEditing(null);
+    setViewing(recipe);
+  };
+
+  const openEditor = (recipe: Recipe) => {
+    setViewing(null);
+    setEditing(recipe);
   };
 
   const handleDelete = async (id: string) => {
@@ -238,10 +251,18 @@ export function RecipesPage() {
       {showEditor && (
         <RecipeEditor onClose={() => setShowEditor(false)} onSaved={handleSaved} />
       )}
+      {editing && (
+        <RecipeEditor
+          existing={editing}
+          onClose={() => setEditing(null)}
+          onUpdated={handleUpdated}
+        />
+      )}
       {viewing && (
         <RecipeViewer
           recipe={viewing}
           onClose={() => setViewing(null)}
+          onEdit={() => openEditor(viewing)}
           onDelete={() => handleDelete(viewing.id)}
         />
       )}
@@ -369,13 +390,31 @@ function LoadingState() {
 // Editor modal
 // ---------------------------------------------------------------------------
 function RecipeEditor({
+  existing,
   onClose,
   onSaved,
+  onUpdated,
 }: {
+  existing?: Recipe;
   onClose: () => void;
-  onSaved: (r: Recipe) => void;
+  onSaved?: (r: Recipe) => void;
+  onUpdated?: (r: Recipe) => void;
 }) {
-  const [draft, setDraft] = useState<RecipeDraft>(emptyDraft);
+  const isEditing = !!existing;
+  const [draft, setDraft] = useState<RecipeDraft>(
+    existing
+      ? {
+          title: existing.title,
+          category: existing.category,
+          description: existing.description,
+          ingredients: existing.ingredients,
+          instructions: existing.instructions,
+          prep_time: existing.prep_time,
+          servings: existing.servings,
+          photo_url: existing.photo_url,
+        }
+      : emptyDraft
+  );
   const [saving, setSaving] = useState(false);
   const [uploading, setUploading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -425,13 +464,24 @@ function RecipeEditor({
       } = await supabase.auth.getUser();
       if (!user) throw new Error('Not signed in');
 
-      const { data, error: insErr } = await supabase
-        .from('recipes')
-        .insert([{ ...draft, user_id: user.id }])
-        .select()
-        .single();
-      if (insErr) throw insErr;
-      onSaved(data as Recipe);
+      if (isEditing && existing) {
+        const { data, error: updErr } = await supabase
+          .from('recipes')
+          .update({ ...draft })
+          .eq('id', existing.id)
+          .select()
+          .single();
+        if (updErr) throw updErr;
+        onUpdated?.(data as Recipe);
+      } else {
+        const { data, error: insErr } = await supabase
+          .from('recipes')
+          .insert([{ ...draft, user_id: user.id }])
+          .select()
+          .single();
+        if (insErr) throw insErr;
+        onSaved?.(data as Recipe);
+      }
     } catch (err: any) {
       console.error('Save failed:', err);
       setError('Could not save the recipe. Please try again.');
@@ -448,7 +498,7 @@ function RecipeEditor({
           style={{ backgroundColor: '#8f1133' }}
         >
           <h2 className="text-xl font-bold text-white" style={{ fontFamily: 'Crimson Text, serif' }}>
-            Add a Recipe
+            {isEditing ? 'Edit Recipe' : 'Add a Recipe'}
           </h2>
           <button onClick={onClose} className="text-white opacity-80 hover:opacity-100">
             <X className="h-6 w-6" />
@@ -586,7 +636,7 @@ function RecipeEditor({
             className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl font-semibold text-white disabled:opacity-60"
             style={{ backgroundColor: '#8f1133' }}
           >
-            {saving ? 'Saving…' : (<><Check className="h-4 w-4" /> Save Recipe</>)}
+            {saving ? 'Saving…' : (<><Check className="h-4 w-4" /> {isEditing ? 'Save Changes' : 'Save Recipe'}</>)}
           </button>
         </div>
       </div>
@@ -600,10 +650,12 @@ function RecipeEditor({
 function RecipeViewer({
   recipe,
   onClose,
+  onEdit,
   onDelete,
 }: {
   recipe: Recipe;
   onClose: () => void;
+  onEdit: () => void;
   onDelete: () => void;
 }) {
   const [confirmDelete, setConfirmDelete] = useState(false);
@@ -690,8 +742,8 @@ function RecipeViewer({
             </section>
           )}
 
-          {/* Delete */}
-          <div className="pt-4 border-t" style={{ borderColor: '#F0E8EB' }}>
+          {/* Actions */}
+          <div className="pt-4 border-t flex items-center justify-between" style={{ borderColor: '#F0E8EB' }}>
             {confirmDelete ? (
               <div className="flex items-center gap-3">
                 <span className="text-sm" style={{ color: '#6B5B73' }}>
@@ -713,14 +765,24 @@ function RecipeViewer({
                 </button>
               </div>
             ) : (
-              <button
-                onClick={() => setConfirmDelete(true)}
-                className="inline-flex items-center gap-2 text-sm font-medium"
-                style={{ color: '#9B8A93' }}
-              >
-                <Trash2 className="h-4 w-4" />
-                Delete recipe
-              </button>
+              <>
+                <button
+                  onClick={onEdit}
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white"
+                  style={{ backgroundColor: '#8f1133' }}
+                >
+                  <Pencil className="h-4 w-4" />
+                  Edit Recipe
+                </button>
+                <button
+                  onClick={() => setConfirmDelete(true)}
+                  className="inline-flex items-center gap-2 text-sm font-medium"
+                  style={{ color: '#9B8A93' }}
+                >
+                  <Trash2 className="h-4 w-4" />
+                  Delete
+                </button>
+              </>
             )}
           </div>
         </div>
