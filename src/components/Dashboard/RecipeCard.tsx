@@ -35,7 +35,7 @@ export function RecipeCard({ recipeCount = 0 }: RecipeCardProps) {
     return (
       <div
         onClick={() => navigate('/recipes')}
-        className="rounded-2xl p-8 cursor-pointer transition-all border-2 hover:shadow-xl relative overflow-hidden"
+        className="rounded-2xl p-8 cursor-pointer transition-all border-2 hover:shadow-xl"
         style={{ backgroundColor: '#FBF5F7', borderColor: '#EAD7DD', minHeight: '280px' }}
       >
         <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6" style={{ backgroundColor: '#F5E6EA' }}>
@@ -62,38 +62,38 @@ export function RecipeCard({ recipeCount = 0 }: RecipeCardProps) {
     );
   }
 
-  // Unlocked variant (default while loading too, to avoid a flash of locked)
+  // Unlocked variant (also shown while access is loading, to avoid a flash of locked)
   return (
     <div
       onClick={() => navigate('/recipes')}
-      className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 cursor-pointer transition-all border-2 border-amber-200 hover:shadow-xl"
-      style={{ minHeight: '280px' }}
+      className="rounded-2xl p-8 cursor-pointer transition-all border-2 hover:shadow-xl"
+      style={{ backgroundColor: '#FBF5F7', borderColor: '#EAD7DD', minHeight: '280px' }}
     >
-      <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6" style={{ backgroundColor: '#FEF3C7' }}>
-        <ChefHat className="h-7 w-7" style={{ color: '#D97706' }} />
+      <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6" style={{ backgroundColor: '#F5E6EA' }}>
+        <ChefHat className="h-7 w-7" style={{ color: '#8f1133' }} />
       </div>
 
       <h3 className="text-2xl font-serif font-bold mb-2" style={{ color: '#3A3A3A', fontFamily: 'Crimson Text, serif' }}>
         Recipe Book
       </h3>
 
-      <p className="text-sm mb-6" style={{ color: '#92400E' }}>
+      <p className="text-sm mb-6" style={{ color: '#6B5B73' }}>
         Preserve your family's treasured recipes forever
       </p>
 
       {recipeCount > 0 ? (
         <div className="mb-6">
-          <div className="text-3xl font-bold" style={{ color: '#D97706' }}>{recipeCount}</div>
-          <div className="text-sm" style={{ color: '#92400E' }}>Recipes preserved</div>
+          <div className="text-3xl font-bold" style={{ color: '#8f1133' }}>{recipeCount}</div>
+          <div className="text-sm" style={{ color: '#6B5B73' }}>Recipes preserved</div>
         </div>
       ) : (
-        <div className="flex items-center gap-2 mb-6 py-2 px-3 rounded-lg" style={{ backgroundColor: '#FEF3C7' }}>
-          <Plus className="h-4 w-4" style={{ color: '#D97706' }} />
-          <span className="text-sm font-medium" style={{ color: '#92400E' }}>No recipes yet - start adding!</span>
+        <div className="flex items-center gap-2 mb-6 py-2 px-3 rounded-lg" style={{ backgroundColor: '#F5E6EA' }}>
+          <Plus className="h-4 w-4" style={{ color: '#8f1133' }} />
+          <span className="text-sm font-medium" style={{ color: '#8f1133' }}>No recipes yet - start adding!</span>
         </div>
       )}
 
-      <div className="flex items-center gap-2 text-sm font-bold" style={{ color: '#D97706' }}>
+      <div className="flex items-center gap-2 text-sm font-bold" style={{ color: '#8f1133' }}>
         <span>{recipeCount > 0 ? 'View Recipes' : 'Start Your Recipe Book'}</span>
         <ArrowRight className="h-4 w-4" />
       </div>
