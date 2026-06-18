@@ -7,9 +7,10 @@ interface RecipeCardProps {
   recipeCount?: number;
 }
 
-export function RecipeCard({ recipeCount = 0 }: RecipeCardProps) {
+export function RecipeCard({ recipeCount }: RecipeCardProps) {
   const navigate = useNavigate();
   const [hasAccess, setHasAccess] = useState<boolean | null>(null);
+  const [count, setCount] = useState<number>(recipeCount ?? 0);
 
   useEffect(() => {
     let active = true;
@@ -21,6 +22,14 @@ export function RecipeCard({ recipeCount = 0 }: RecipeCardProps) {
         const plan = (user?.user_metadata?.plan as string) || '';
         const access = plan.includes('_recipe') || plan === 'legacy';
         if (active) setHasAccess(access);
+
+        if (user && access) {
+          const { count: c } = await supabase
+            .from('recipes')
+            .select('*', { count: 'exact', head: true })
+            .eq('user_id', user.id);
+          if (active && typeof c === 'number') setCount(c);
+        }
       } catch {
         if (active) setHasAccess(false);
       }
@@ -81,10 +90,12 @@ export function RecipeCard({ recipeCount = 0 }: RecipeCardProps) {
         Preserve your family's treasured recipes forever
       </p>
 
-      {recipeCount > 0 ? (
+      {count > 0 ? (
         <div className="mb-6">
-          <div className="text-3xl font-bold" style={{ color: '#8f1133' }}>{recipeCount}</div>
-          <div className="text-sm" style={{ color: '#6B5B73' }}>Recipes preserved</div>
+          <div className="text-3xl font-bold" style={{ color: '#8f1133' }}>{count}</div>
+          <div className="text-sm" style={{ color: '#6B5B73' }}>
+            {count === 1 ? 'Recipe preserved' : 'Recipes preserved'}
+          </div>
         </div>
       ) : (
         <div className="flex items-center gap-2 mb-6 py-2 px-3 rounded-lg" style={{ backgroundColor: '#F5E6EA' }}>
@@ -94,7 +105,7 @@ export function RecipeCard({ recipeCount = 0 }: RecipeCardProps) {
       )}
 
       <div className="flex items-center gap-2 text-sm font-bold" style={{ color: '#8f1133' }}>
-        <span>{recipeCount > 0 ? 'View Recipes' : 'Start Your Recipe Book'}</span>
+        <span>{count > 0 ? 'View Recipes' : 'Start Your Recipe Book'}</span>
         <ArrowRight className="h-4 w-4" />
       </div>
     </div>
