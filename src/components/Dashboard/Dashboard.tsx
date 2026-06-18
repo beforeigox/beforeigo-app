@@ -308,12 +308,15 @@ export function Dashboard() {
     : 'Create another beautiful legacy book to capture different aspects of your life'
   }
 </p>
-              <div className="text-sm font-medium" style={{ color: '#8f1133' }}>
+            <div className="text-sm font-medium" style={{ color: '#8f1133' }}>
                 Start Writing →
               </div>
             </div>
+
+            <RecipeCard />
           </div>
         </div>
+
 
         {/* Upgrade Options Sidebar */}
         <div className="space-y-6">
@@ -325,7 +328,7 @@ export function Dashboard() {
           </div>
 
           {/* Recipe Book */}
-          <RecipeCard />
+         
 
           {upsellFeatures.slice(0, 3).map((feature) => (
             <div key={feature.id} className="bg-white rounded-xl border border-gray-100 p-6 transition-shadow"
