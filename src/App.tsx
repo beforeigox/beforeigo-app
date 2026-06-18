@@ -8,6 +8,7 @@ import { RoleSelection } from './pages/RoleSelection';
 import { AddStory } from './pages/AddStory';
 import { StoryShare } from './pages/StoryShare';
 import { HardcoverConfirmation } from './pages/HardcoverConfirmation';
+import { RecipesPage } from './pages/RecipesPage';
 import { Navigation } from './components/Layout/Navigation';
 import { Dashboard } from './components/Dashboard/Dashboard';
 import { ProjectsList } from './components/Projects/ProjectsList';
@@ -57,6 +58,14 @@ function AppContent() {
 	<Route path="/add-story" element={<AddStory />} />
 	<Route path="/share/:story_id" element={<StoryShare />} />
         <Route path="/hardcover-confirmation" element={<HardcoverConfirmation />} />
+<Route
+  path="/recipes"
+  element={
+    <PrivateRoute>
+      <RecipesPage />
+    </PrivateRoute>
+  }
+/>
         <Route
           path="/dashboard"
           element={
