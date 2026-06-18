@@ -4,6 +4,7 @@ import { useAuth } from '../../contexts/AuthContext';
 import { supabase } from '../../lib/supabase';
 import { upsellFeatures } from '../../utils/mockData';
 import { Link, useNavigate } from 'react-router-dom';
+import { RecipeCard } from './RecipeCard';
 
 export function Dashboard() {
   const { user } = useAuth();
@@ -322,6 +323,9 @@ export function Dashboard() {
               Add premium features to make your legacy even more special
             </p>
           </div>
+
+          {/* Recipe Book */}
+          <RecipeCard />
 
           {upsellFeatures.slice(0, 3).map((feature) => (
             <div key={feature.id} className="bg-white rounded-xl border border-gray-100 p-6 transition-shadow"
